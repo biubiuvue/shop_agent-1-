@@ -1,0 +1,40 @@
+<!--partnerInfo.wxml-->
+<view class="page" style="{{windowHeight}}">
+    <view class="header-img">
+        <image src="{{teamsinfo.avatar}}" alt=""></image>
+        <view class="h4">{{teamsinfo.nickname}}</view>
+        <view class="div">ID <view class="p">{{teamsinfo.id}}</view></view>
+        <view class="div">手机号 <view class="p">{{teamsinfo.mobile}}</view></view>
+        <view class="div">会员等级<view class="p">{{levelname}}</view></view>
+        <view class="div">分销等级<view class="p">{{agentlevel}}</view></view>
+    </view>
+    <view class="money">
+        <view class="money-left div">
+            <view class="p">{{cg_money_sum}}</view>
+            营业额
+        </view>
+        <view class="div">
+            <view class="p">{{c_money_sum}}</view>
+            推广费
+        </view>
+    </view>
+    <view class="order">
+        <view class="div">
+            <view class="p">{{o_status_1_price}}</view>
+            已付款
+        </view>
+        <view class="div">
+            <view class="p">{{o_status_2_price}}</view>
+            已发货
+        </view>
+        <view class="div">
+            <view class="p">{{o_status_3_price}}</view>
+            已完成
+        </view>
+        <view class="last div">
+            <view class="p">{{o_status_r1_price}}</view>
+            退货
+        </view>
+    </view>
+</view>
+

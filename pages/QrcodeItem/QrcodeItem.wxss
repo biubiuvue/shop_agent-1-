@@ -1,0 +1,28 @@
+/* QRCode.wxss */
+.page{
+    font-family: "Microsoft yahei";
+    overflow: hidden;
+}
+.qrImg{
+    width:100%;
+}
+.qrImg image{
+    display: block;
+    width:100%;
+    height:100%;
+}
+.share-page{
+    background: #f8f8f8;
+    padding-top:400rpx;
+    text-align: center;
+}
+.share-page span{
+    font-size:200rpx;
+    color:#999;
+}
+.share-page text{
+    display: block;
+    margin-top:20rpx;
+    color:#555;
+    font-size:34rpx
+}

@@ -1,0 +1,79 @@
+<view class="page" wx:if="{{!onLoaded}}">
+  <!-- 分隔块 -->
+  <view class="delblock"></view>
+  <view class="money">
+    <view class="money-title">
+      可提现金额 (元)
+    </view>
+    <view class="money-item">
+      {{ok}}
+    </view>
+  </view>
+  <!-- 分隔块 -->
+  <view class="delblock"></view>
+  <view class="income">
+    <view class="income-title">
+      收入
+    </view>
+    <view class="income-item">
+      <text>累积销售收益</text>
+      <text class="income-element">{{default}} 元</text>
+    </view>
+    <view class="income-item">
+      <text>累积管理收益</text>
+      <text class="income-element">{{manage}} 元</text>
+    </view>
+  </view>
+  <!-- 分隔块 -->
+  <view class="delblock"></view>
+  <view class="income">
+    <view class="income-title">
+      支出
+    </view>
+    <view class="income-item" bindtap="goMoneyDetaile">
+      <text>已提现金额</text>
+      <view class="income-element">
+        <text>{{pay}}元</text>
+        <text class="deltriangle"></text>
+      </view>
+    </view>
+  </view>
+  <!-- 分隔块 -->
+  <view class="delblock"></view>
+  <view class="income">
+    <view class="income-title">
+      推广业绩
+    </view>
+    <view class="income-item">
+      <text>已收货的业绩</text>
+      <text class="income-element">{{o_status_3}} 元</text>
+    </view>
+    <view class="income-item">
+      <text>已提现业绩</text>
+      <text class="income-element">{{pay}} 元</text>
+    </view>
+     <view class="income-item">
+      <text>可提现业绩</text>
+      <text class="income-element">{{ok}} 元</text>
+    </view>
+     <view class="income-item">
+      <text>被驳回业绩</text>
+      <text class="income-element">{{invalid}} 元</text>
+    </view>
+     <view class="income-item">
+      <text>申请中业绩</text>
+      <text class="income-element">{{apply}} 元</text>
+    </view>
+     <view class="income-item">
+      <text>待打款业绩</text>
+      <text class="income-element">{{check}} 元</text>
+    </view>
+  </view>
+  <view class="gopay" bindtap="goCashFlow">
+    提现
+  </view>
+</view>
+<!-- loadding -->
+<view class="loadding" wx:if="{{onLoaded}}">
+    <image src="../../public/images/loadding.gif"></image>
+</view>

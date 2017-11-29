@@ -1,0 +1,40 @@
+<!--partner.wxml-->
+<view class="page" style="{{windowHeightAll}}" >
+    <!--<view class="search" wx:if="{{searchShow}}">-->
+    <view class="search">
+        <view class="position">
+            <view class="icon-search"></view>
+            <input type="number" placeholder="输入手机号、粉丝ID" bindinput="makeContent" value="{{defVal}}"/>
+            <view class="search-btn" bindtap="searchTap">搜索</view>
+        </view>
+    </view>
+    <view class="header-tap">
+        <view wx:for="{{partnerTap}}" wx:key="{{index}}" data-id="{{item.id}}" class="{{index==partnerTap.length-1?'last':''}} {{curNav == item.id ? 'active' : ''}}" bindtap="switchRightTab">
+            <image></image>
+            <text>{{item.title}}</text>
+        </view>
+    </view>
+    <scroll-view scroll-y="true" class="p-list" bindscrolltolower="lower" style="{{windowHeight}}" wx:if="{{orderShow}}">
+        <view  wx:for="{{personlist}}" wx:key="{{index}}" data-openid="{{item.openid}}" bindtap="detailTap" class="p-cell li {{index==0?'first':''}}">
+                <view class="logo div">
+                    <image src="{{item.avatar}}"></image>
+                </view>
+                <view class="info div">
+                    <view class="h5">{{item.nickname}}</view>
+                    <span>{{item.id}}</span>
+                    <span class="usertime">{{item.createtime}}关注</span>
+                </view>
+            </view>
+        <view class="bottom" wx:if="{{hideBottom}}">
+            <view class="bottom-item loadMsg">{{loadMoreData}}</view>
+        </view>
+    </scroll-view>
+    <view class="share-page" wx:if="{{!orderShow}}">
+        <span class="iconfont icon-yaoqinghaoyou"></span>
+        <view class="p">您还没有小伙伴</view>
+        <view class="p">快去邀请好友吧</view>
+    </view>
+</view>
+<view class="loadding" wx:if="{{onLoaded}}">
+    <image src="../../public/images/loadding.gif"></image>
+</view>

@@ -1,0 +1,33 @@
+/* deposit.wxss */
+.page{
+  background: #F6F6F9;
+  height:1216rpx;
+  position:relative;
+  text-align: center;
+}
+.depositinp{
+  width:95%;
+  padding-left:3%; 
+  position: absolute;
+  top:400rpx;
+  left:2.5%;
+}
+.depositbtn{
+  width:90%;
+  height:85rpx;
+  line-height:85rpx;
+  /* background: #ec5151; */
+  position:absolute;
+  top:500rpx;
+  left:5%;
+  color:#fff;
+  font-size:32rpx;  
+}
+.depositrec{
+  position:absolute;
+  top:620rpx;
+  left:310rpx;
+  font-size: 30rpx;
+  text-align: center;
+  color:#888;
+}

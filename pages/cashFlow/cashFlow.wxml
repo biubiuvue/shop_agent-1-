@@ -1,0 +1,20 @@
+<view class="page" wx:if="{{!onLoaded}}">
+  <!-- 分割块 -->
+  <view class="delblock"></view>
+  <view class="cashFlow-number">
+    <text>￥{{ok}}</text>
+  </view>
+  <!-- 分割块 -->
+  <view class="delblock"></view>
+  <view class="cashFlow-remind">
+    <text class="remind-item">温馨提示：</text>
+    <text class="remind-item">申请提现后平台会进行审核，请耐心等待~</text>
+  </view>
+  <view class="withdrawals" bindtap="withdrawals">
+    确认提现
+  </view>
+</view>
+<!-- loadding -->
+<view class="loadding" wx:if="{{onLoaded}}">
+    <image src="../../public/images/loadding.gif"></image>
+</view>

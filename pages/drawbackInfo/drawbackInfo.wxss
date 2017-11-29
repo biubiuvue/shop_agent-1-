@@ -1,0 +1,72 @@
+/* drawbackInfo.wxss */
+
+page {
+  background: #f8f8f8;
+}
+
+text, view {
+  font-family: Microsoft yahei;
+  font-size: 14px;
+}
+.top-nav-bar {
+  width: 80%;
+  padding: 0 10%;
+  background: #ec5151;
+  color: #fff;
+  display: flex;
+  position: relative;
+}
+
+.top-nav-bar .back-btn {
+  display: block;
+  position: absolute;
+  width: 25rpx;
+  height: 25rpx;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  left: 8%;
+  top: 50%;
+  z-index: 222;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.top-nav-bar .item {
+  display: flex;
+  flex-direction: column-reverse;
+  flex: 1;
+  text-align: center;
+  padding: 30rpx 0;
+  font-size: 16px;
+  position: relative;
+}
+.head-info {
+  padding: 10rpx 20rpx;
+  margin: 22rpx 0;
+  background: #fff;
+}
+
+.head-info .head-title {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #ddd;
+}
+
+.head-info .head-content {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+
+.cancel-refund {
+  width: 94%;
+  height: 90rpx;
+  line-height:90rpx;
+  color: #fff;
+  font-size: 15px;
+  background: #ec5151;
+  border-radius: 3px;
+  outline: none;
+  margin-top: 50rpx;
+}

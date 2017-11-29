@@ -1,0 +1,91 @@
+<view class="page" style="{{windowHeight}}" wx:if="{{!onLoaded}}">
+  <view class="order-top">
+    <view class="order-nav-bar">
+      <view class="detail-block {{curNav == item.id ? 'active' : ''}}" wx:for="{{orderTitArr}}" wx:key="{{index}}" data-idx="{{index}}"
+        data-id="{{item.id}}" data-type="{{item.type}}" bindtap="switchRightTab">{{item.title}}</view>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" class="order-scroll" bindscrolltolower="lower" wx:if="{{orderShow}}">
+    <view class="order-box">
+      <view class="order-item" wx:for="{{orderArr}}" wx:key="{{index}}">
+        <view class="order-tit">
+          <view class="null-tap" data-orderid="{{item.id}}" catchtap="orderDetailTap">
+          </view>
+          <view class="order-num">
+            <text class="tit">订单号：</text>
+            <text class="num">{{item.ordersn}}</text>
+          </view>
+          <view class="order-time">{{item.createtime}}</view>
+        </view>
+
+        <view class="goods-box" data-orderid="{{item.id}}"  catchtap="orderDetailTap">
+          <view class="null-tap" data-express="{{item.express}}" data-expresssn="{{item.expresssn}}" data-orderid="{{item.id}}" catchtap="orderDetailTap"></view>
+            <view  wx:for="{{item.goods}}" wx:for-item="good" wx:key="{{index}}" class="goods-img {{index==item.goods.length-1?'last':''}}">
+              <image mode="widthFix" src="{{good.thumb}}" class="{{index}}" />
+              <view class="pro">
+                <text class="goods_name">{{good.title}}</text>
+                <text class="goods_detail" wx:if="{{good.optionname!=null}}">{{good.optionname}}</text>
+                <text class="goods_detail" wx:else>该商品无规格</text>
+              </view>
+            </view>
+        </view>
+
+        <view class="goods-num-price">
+          <text>共{{item.goods.length}}款商品 合计：</text>
+          <text class="red">￥{{item.goodsprice}}</text>
+        </view>
+        <view class="order-option">
+          <block wx:if="{{item.status==0}}">
+            <button class="cancel-btn" bindtap="cancelOrdertap" data-orderid="{{item.id}}">取消订单</button>
+            <button class="pay-btn" bindtap="confirmPay" data-ordersn="{{item.ordersn}}" data-pricepay="{{item.goodsprice}}">确认支付</button>
+          </block>
+          <button class="cancel-btn" bindtap="drawback" data-orderid="{{item.id}}" data-price="{{item.goodsprice}}" wx:if="{{item.canrefund && item.refundid==0}}">申请退款</button>
+          <button class="cancel-btn" bindtap="drawbackInfo" data-refundid="{{item.refundid}}" wx:if="{{item.canrefund && item.refundid!=0}}">退款申请中</button>
+          <block wx:if="{{item.status==2}}">
+            <button class="cancel-btn" bindtap="confirmMark" data-orderid="{{item.id}}">确认收货</button>
+          </block>
+          <block wx:if="{{item.status==2 || item.status==3}}">
+            <button class="pay-btn" bindtap="lookTrace" data-express="{{item.express}}" data-expresssn="{{item.expresssn}}" data-orderid="{{item.id}}">查看物流</button>
+          </block>
+          <!--待评价按钮 如果有区分已完成待评价和已评价的字段 在item.status==3之后加上判断区分-->
+          <!--<block wx:if="{{item.status==3}}">-->
+            <!--<button class="cancel-btn" bindtap="goComment" data-orderid="{{item.id}}">去评价</button>-->
+          <!--</block>-->
+        </view>
+      </view>
+    </view>
+      <view class="bottom" wx:if="{{hideBottom}}">
+          <view class="bottom-item loadMsg">{{loadMoreData}}</view>
+      </view>
+  </scroll-view>
+  <!--弹出选择支付蒙板-->
+  <view class="mask-filter-div" hidden="{{hidden}}"></view>
+  <view class="pay-block" hidden="{{hidden}}">
+    <!--<view class="pay-info">-->
+      <view class="close-btn">
+        <view class="close-btnson" bindtap="hideStandard">×</view>
+      </view>
+      <view class="pro-title">继续支付</view>
+      <view class="pricePay">
+        <text>￥{{pricePay}}</text>
+      </view>
+      <view class="orderInfoPay">
+        <text class="left">订单编号</text>
+        <text class="right">{{ordersn}}</text>
+      </view>
+      <!-- <button type="primary" class="wx-pay" bindtap="payTap">微信支付</button> -->
+      <button type="primary" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="payTap"
+      hover-class="other-button-hover" class="wx-pay"> 微信支付 </button>
+    <!--</view>-->
+  </view>
+  <view class="share-page" wx:if="{{!orderShow}}">
+    <span class="iconfont icon-shoucangliebiao"></span>
+    <view class="p">您还没有相关订单</view>
+    <view class="p">快去购买喜欢的物品吧</view>
+    <button bindtap="goLook" class="look-btn">去逛逛</button>
+  </view>
+</view>
+<!-- loadding -->
+<view class="loadding" wx:if="{{onLoaded}}">
+  <image src="../../public/images/loadding.gif"></image>
+</view>

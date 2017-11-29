@@ -1,0 +1,35 @@
+<view class="page" style="{{windowHeight}}">
+    <!-- 分割块 -->
+    <view class="delblock"></view>
+    <!-- 填写收货地址信息 -->
+    <view class="addMessage">
+        <view class="addMessage-item">
+            <input type="text" class="title lr1" placeholder="收件人" bindinput="getUserName" value="{{userName}}" placeholder-class="itpclass"
+                auto-focus/>
+            <view class="arrow-right"></view>
+        </view>
+        <view class="addMessage-item">
+            <input type="number" class="title lr1" placeholder="联系电话" maxlength="11" bindinput="getUserTel" value="{{userTel}}" placeholder-class="itpclass"
+            />
+            <view class="arrow-right"></view>
+        </view>
+        <view class="addMessage-item">
+            <input type="text" class="title lr1" placeholder="请选择地址" value="{{userAddress}}" disabled="{{true}}" placeholder-class="itpclass"
+            />
+            <view class="arrow-right"></view>
+            <picker mode="region" bindchange="getCity" class="disview">
+                <view class="picker" class="disview"> </view>
+            </picker>
+        </view>
+        <view class="addMessage-item">
+            <input type="text" class="title lr1" placeholder="详细地址" bindinput="getUserMoreAddress" value="{{userMoreAddress}}" placeholder-class="itpclass"
+            />
+            <view class="arrow-right"></view>
+        </view>
+    </view>
+    <!-- 备注 -->
+    <text class="remarks">详细地址需填写楼栋楼层或房间号信息</text>
+    <!-- 确认收货地址 -->
+    <view class="addAddress" bindtap="postAddress">确认</view>
+    <view class="delAddress" bindtap="delAddress" wx:if="{{delShow}}">删除地址</view>
+</view>

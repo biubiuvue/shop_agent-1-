@@ -1,0 +1,43 @@
+<!--orderInfo.wxml-->
+<view class="page" style="{{windowHeight}}">
+    <view class="title">
+        <view class="h3">{{ordernum.price}}</view>
+        <span>{{ordernum.status}}</span>
+    </view>
+    <view class="orderinfo">
+        <view class="ordercell li">
+            <view class="left">购买用户</view>
+            <view class="right">{{ordernum.nickname}}</view>
+        </view>
+        <view class="ordercell li">
+            <view class="left">用户编号</view>
+            <view class="right">{{ordernum.id}}</view>
+        </view>
+        <view class="ordercell li">
+            <view class="left">订单号</view>
+            <view class="right">{{ordernum.ordersn}}</view>
+        </view>
+        <view class="ordercell li">
+            <view class="left">付款时间</view>
+            <view class="right">{{ordernum.paytime}}</view>
+        </view>
+    </view>
+    <view class="order-list" >
+        <view wx:for="{{ordercom}}" wx:key="{{index}}" class="li">
+            <view class="left">
+                <span class="icon">{{item.c_rank}}</span>
+            </view>
+            <view class="right {{index==ordercom.length-1?'color':''}}">
+                <view class="money">
+                    <view class="dec-left">昵称：<span>{{item.nickname}}</span></view>
+                    <view class="yong">佣金金额：{{item.c_money}}</view>
+                </view>
+                <view class="dec">
+                    <view class="dec-left p">用户编号：{{item.id}}</view>
+                    <view class="yong p">佣金比列：{{item.c_rate}}</view>
+                </view>
+            </view>
+        </view>
+
+    </view>
+</view>

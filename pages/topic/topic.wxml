@@ -1,0 +1,8 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class="page" style="{{windowHeight}}">
+
+    <view class="proDetailNode">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+
+</view>

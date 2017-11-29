@@ -1,0 +1,51 @@
+.page{
+  background: #f8f8f8;
+  font-family: Microsoft yahei;
+  padding-top:20rpx;
+}
+.user-item{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-bottom:1px solid #F3F4F5;
+  background: #fff;
+  position: relative;
+}
+.user-ipt{
+  padding-left: 20rpx;
+  color:#000;
+  font-size: 14px;
+  flex: 2;
+}
+.deltriangle{
+  width:15rpx;
+  height:15rpx;  
+  margin-right: 20rpx;
+}
+.user-photo{
+  line-height: 90rpx;
+  margin-bottom: 20rpx;
+  border:none;
+}
+.disview{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0px;
+  left:0px;
+  z-index: 10;
+}
+.sendUserInfo{
+  width:95%;
+  height:100rpx;
+  line-height:100rpx;
+  text-align:center;
+  font-size:16px;
+  margin:0 auto;
+  border-radius:5px;
+  background:#19AC15;
+  color:#fff;
+  margin-top:40rpx;    
+}

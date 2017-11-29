@@ -1,0 +1,88 @@
+<view class="page" wx:if="{{!onLoaded}}">
+  <!-- 分割块 -->
+  <view class="delblock"></view>
+  <!-- 地址 -->
+  <view class="address-manager" bindtap="addressList" data-addIndex="{{defaultAddress.id}}">
+    <!-- 没有默认地址时候显示 -->
+    <view class="addressee" wx:if="{{addressLists.length==0}}">
+      <view class="address-tp clearfix">
+        <text class="fl">请填写收货地址</text>
+      </view>
+    </view>
+    <!-- 默认地址 -->
+    <view class="addressee" wx:if="{{addressLists.length>0}}">
+      <view class="address-tp clearfix">
+        <text class="fl lr1">收货人 : {{defaultAddress.realname}}</text>
+        <text class="fr lr1">电话 : {{defaultAddress.mobile}}</text>
+      </view>
+      <view class="address-content lr2">
+        {{defaultAddress.address}}
+      </view>
+    </view>
+    <view class="arrow-right"></view>
+    <!-- 默认线 -->
+    <view class="line"></view>
+  </view>
+  <!-- 分割块 -->
+  <view class="delblock"></view>
+  <view>
+    {{testName}}
+  </view>
+  <!-- 商品信息 -->
+  <view class="goods-item">
+    <view class="goods-info" wx:for="{{orderGoods}}" wx:key="{{index}}">
+      <image src="{{item.thumb}}" />
+      <view class="goods-info-de">
+        <view class="goods-name">{{item.title}}</view>
+        <view class="goods-price-num">
+          <text class="goods-price">￥{{item.marketprice}}</text>
+          <text class="goods-num">X{{item.total}}</text>
+        </view>
+        <view class="optionList" wx:if="{{item.optiontitle}}">
+          <text>{{item.optiontitle}}</text>
+        </view>
+        <view wx:else>
+          <text>无规格</text>
+        </view>
+      </view>
+    </view>
+    <!-- 配送方式 -->
+    <view class="express-style clearfix" bindtap="godeliveryList" data-dispatche="{{dispatche}}">
+      <text class="title fl">配送方式</text>
+      <text class="delivery fr">{{dispatche}}</text>
+      <view class="arrow-right"></view>
+    </view>
+  </view>
+  <!-- 分割块 -->
+  <view class="delblock"></view>
+  <!-- 付款信息 -->
+  <view class="pay-style-box">
+    <view class="pay-style-detail clearfix">
+      <text class="title fl">商品总金额</text>
+      <text class="pay-style-name fr">￥{{memberDiscount.goodsprice}}</text>
+    </view>
+    <view class="pay-style-detail clearfix">
+      <text class="title fl">运费</text>
+      <text class="pay-style-name fr">+￥{{dispatcheMoney}}</text>
+    </view>
+    <view class="pay-style-detail clearfix">
+      <text class="title fl">立减</text>
+      
+      <text class="pay-style-name fr" wx:if="{{memberDiscount.fluctuateprice}}">-￥{{memberDiscount.fluctuateprice }}</text>
+      <text class="pay-style-name fr" wx:else>-￥{{memberDiscount.discountprice }}</text>
+    </view>
+    <view class="relpay">
+      实付金额:
+      <text class="relpay-item">￥{{memberDiscount.realprice+dispatcheMoney}}</text>
+    </view>
+    <!-- <view class="weixinpay" bindtap="gopay">
+      微信支付
+    </view> -->
+    <button type="primary" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="gopay"
+      hover-class="other-button-hover" class="weixinpay"> 微信支付 </button>
+  </view>
+</view>
+<!-- loading -->
+<view class="loadding" wx:if="{{onLoaded}}">
+  <image src="../../public/images/loadding.gif"></image>
+</view>

@@ -1,0 +1,80 @@
+.page{
+    background: #f8f8f8;
+    font-family: "Microsoft yahei";
+}
+view{
+    box-sizing:border-box;
+}
+.header-img{
+    background: #fff;
+    padding-top:60rpx;
+    padding-bottom:10rpx;
+    margin-bottom:20rpx;
+    text-align: center;
+    border-top:1px solid #ebdfde;
+}
+.header-img image{
+    width:180rpx;
+    height:180rpx;
+    border-radius:50%;
+    margin-bottom:20rpx;
+}
+.header-img .h4{
+    margin-bottom:60rpx;
+    font-weight: 400;
+    font-size: 40rpx;
+}
+.header-img .div{
+    padding: 0 20rpx;
+    text-align:left;
+    margin-bottom:20rpx;
+    font-size:28rpx;
+}
+.header-img .div .p{
+    float:right;
+    color:#999;
+}
+.money{
+    height:120rpx;
+    background:#fff;
+    border-top:1px solid #ebdfde;
+    border-bottom:1px solid #ebdfde;
+    margin-bottom:20rpx;
+}
+.money .div{
+    height:116rpx;
+    float:left;
+    width:50%;
+    text-align:center;
+    font-size:30rpx;
+    padding-top:20rpx;
+}
+.money .div .p{
+    margin-bottom:4rpx;
+}
+.money>.money-left{
+    border-right:1px solid #ebdfde;
+}
+.order{
+    height:120rpx;
+    border-top:1px solid #ebdfde;
+    /*border-bottom:1px solid #ebdfde;*/
+    background: #fff;
+}
+.order .div{
+    float:left;
+    padding-top:20rpx;
+    height:118rpx;
+    width:50%;
+    font-size:28rpx;
+    text-align: center;
+    background: #fff;
+    border-right: 1px solid #ebdfde;
+    border-bottom:1px solid #ebdfde
+}
+/*.order>div.last{*/
+/*border-right:none;*/
+/*}*/
+.order .div .p{
+    margin-bottom:4rpx;
+}

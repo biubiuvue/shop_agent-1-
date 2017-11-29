@@ -1,0 +1,78 @@
+.page{
+    background: #F6F6F9;
+    color: #333;
+    font-family: Microsoft YaHei;
+    font-size: 14px;
+    height: 100%;
+}
+.address-list{
+    margin-top: 20rpx;
+    margin-bottom: 96rpx;
+}
+.address-list-item{
+    border-bottom: 1px solid #eaeaea;
+    line-height: 44rpx;
+    color:#666;
+    margin-bottom:20rpx;
+    background:#fff;
+}
+.address-list-content{
+    padding:30rpx 24rpx 0rpx 24rpx;
+}
+.address-tp{
+    font-size: 14px;
+}
+.address-bt{
+    font-size: 12px;
+}
+.addAddress{
+    position:fixed;
+    left:0;
+    bottom:0;
+    width: 100%;
+    height: 96rpx;
+    line-height: 96rpx;
+    background: #f50;
+    text-align: center;
+    font-size: 32rpx;
+    color:#fff;
+}
+.address-edit{
+    padding:30rpx 0;
+    font-size: 16px;
+}
+.remove-address{
+    border-top:1px solid #eaeaea;
+    padding:0rpx 40rpx;
+    margin-top: 20rpx;
+    font-size: 14px;
+    color: #666;
+}
+.remove-address .remove-address-lf,.remove-address .remove-address-lr{
+    padding:15rpx 0rpx;
+}
+.none-goods{
+    padding-top: 100rpx;
+}
+.none-goods text{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.none-goods .cart-icon{
+    width: 260rpx;
+    height: 260rpx;
+    background: #DFE0E8;
+    border-radius: 100%;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 50rpx;
+}
+.none-goods .cart-icon image{
+    width: 150rpx;
+    height: 150rpx;
+    left: 50%;
+    top: 50%;
+    position: relative;
+    transform: translate(-50%,-50%)
+}

@@ -1,0 +1,39 @@
+<!--favorite.wxml-->
+<view class="page" style="{{windowHeight}}">
+    <scroll-view scroll-y="true" class="scroll-fav"  bindscrolltolower="lower" wx:if="{{orderShow}}" style="{{windowHeight}}">
+        <view class="fav-item" wx:for="{{favoriteArr}}" wx:key="index">
+            <view class="fav-icon">
+                <icon wx:if="{{item.selected}}" type="success" size="25" bindtap="select" data-index="{{index}}" data-id="{{item.id}}" class="myicon" color="rgb(230,67,64)"/>
+                <icon wx:else type="circle" size="25" bindtap="select" data-index="{{index}}"  data-id="{{item.id}}" class="myicon" color="rgb(230,67,64)" />
+            </view>
+            <view class="goods-info" data-id="{{item.id}}" bindtap="goPro">
+                <image src="{{item.thumb}}" alt=""/>
+                <view class="pro">
+                    <text class="goods_name">{{item.title}}</text>
+                    <text class="goods_detail" wx:if="{{item.favoritetime!=null}}">收藏时间： {{item.favoritetime}}</text>
+                    <!--<text class="goods_detail" wx:else>该商品无规格</text>-->
+                    <text class="goods_price">￥{{item.marketprice}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="bottom-tit" wx:if="{{hideBottom}}">
+            <view class="bottom-item loadMsg">{{loadMoreData}}</view>
+        </view>
+    </scroll-view>
+    <view class="bottom" wx:if="{{orderShow}}">
+        <view class="allselect">
+            <view bindtap="selectAll" class="fl">
+                <icon wx:if="{{selectAllStatus}}" type="success" size="25" class="l-mycheck" color="rgb(230,67,64)" />
+                <icon wx:else type="circle" size="25" class="l-mycheck" color="rgb(230,67,64)" />
+            </view>
+            <view class="sel-text">全选</view>
+        </view>
+        <view class="cancel-btn" bindtap="cancel">删除</view>
+    </view>
+    <view class="share-page" wx:if="{{!orderShow}}" style="{{windowHeight}}">
+        <span class="iconfont icon-shoucang"></span>
+        <view class="p">您还没有收藏任何物品</view>
+        <view class="p">赶快去看看吧</view>
+        <button bindtap="goLook" class="look-btn">再逛逛</button>
+    </view>
+</view>

@@ -1,0 +1,143 @@
+.page{
+  background: #F8F8F8;
+  color: #333;
+  font-family: Microsoft YaHei;
+  font-size: 14px;
+  overflow-y: hidden;
+}
+.addMessage{
+    /* border-top:1px solid #dadada; */
+}
+.addMessage-item{
+  display: flex;
+  align-items: center;
+   border-bottom: 1px solid #f6f6f9;
+   padding: 20rpx 20rpx;
+   position: relative;
+   background: #fff;
+   color: #666;
+   position: relative;
+}
+.addMessage-item .title{
+  display: flex;
+  width:90%;
+  flex: 1;
+  color: #000;
+  font-size: 14px;
+}
+.addMessage-item .arrow-right{
+  display: block;
+  position: absolute;
+  width: 15rpx;
+  height: 15rpx;
+  border-top:1px solid #888; 
+  border-left:1px solid #888; 
+  right: 15rpx;
+  top: 50%;
+  z-index: 111;
+  transform: translate(-50%,-50%) rotate(135deg);
+}
+.citypicker{
+  position:fixed;
+  left:0;
+  bottom:0;
+  width: 100%;
+  height: 300px;
+  z-index: 70;
+ 
+}
+
+.citybody {
+  height:100%;
+  width:100%;
+  background: #fff;
+}
+
+.cityheader {
+  position: absolute;
+  top:0px;
+  width: 100%;
+  z-index: 60;
+  background: #fff;
+  font-size: 16px;
+}
+
+.city-cancel {
+  float: left;
+  margin: 40rpx;
+  color: #828282;
+}
+
+.city-true {
+  float: right;
+  margin: 40rpx;
+  color: #19AC15;
+}
+
+.section .picker {
+  background-color: #fff;
+  border-bottom: 2px #cccccc solid;
+  border-top: 2px #d9d9d9 solid;
+  padding: 20rpx;
+}
+.mark{
+  position: fixed;
+  top:0px;
+  left:0px;
+  background: rgba(0,0,0,.5);
+  z-index: 10
+}
+.addAddress,.delAddress{
+  width:95%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 16px;
+  margin:0 auto;
+  border-radius: 5px;
+}
+.addAddress{
+  background: #19AC15;
+  color:#fff;
+  margin-top: 40rpx;
+}
+.delAddress{
+  background: #fff;
+  color:#666;
+  margin-top: 30rpx;
+}
+.remarks{
+  display: block;
+  width: 95%;
+  text-align: left;
+  font-size: 14px;
+  margin:0 auto;
+  margin-top:20rpx;
+  color:#999;
+}
+.itpclass{
+  font-size: 14px;
+  color:#666;
+}
+.title2{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 999
+}
+.picker-view-column{
+  text-align: center
+}
+.picker-view-column view{
+  text-align: center;
+}
+.disview{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0px;
+  left:0px;
+  z-index: 10;
+}

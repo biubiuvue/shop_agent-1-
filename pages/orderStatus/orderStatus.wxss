@@ -1,0 +1,348 @@
+/* orderStatus.wxss */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.page{
+  background: #f8f8f8;
+}
+text,view{
+   font-family: Microsoft yahei;
+  font-size: 14px;
+}
+.order-scroll{
+  position:fixed;
+left:0;
+top:10%;
+height:90%;
+width:100%;
+}
+.order-top{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 10% ;
+  width: 100%
+}
+.top-nav-bar{
+    width: 80%;
+    padding: 0 10%;
+    background: #EC5151;
+    color: #fff;
+    display: flex;
+    position: relative;
+}
+.top-nav-bar .back-btn{
+  display: block;
+  position: absolute;
+  width: 25rpx;
+  height: 25rpx;
+  border-top:2px solid #fff; 
+  border-left:2px solid #fff; 
+  left: 8%;
+  top: 50%;
+  z-index: 111;
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+.top-nav-bar .item{
+    display: flex;
+    flex-direction: column-reverse;
+    flex: 1;
+    text-align: center;
+    padding: 30rpx 0;
+    font-size: 16px;
+    position: relative
+}
+.order-nav-bar{
+  display: flex;
+  width: 100%;
+  background: #fff;
+      border-bottom: 1px solid #F3F4F9;
+  border-bottom: 1px solid #F3F4F9;
+       padding: 30rpx 0;
+}
+.order-nav-bar .detail-block::last-of-type{
+  border-right: 0;
+}
+.order-nav-bar .detail-block.active{
+  color: #EC5151;
+}
+.order-nav-bar .detail-block{
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid #F3F4F9;
+}
+.order-box{
+  width: 100%;
+  background: #fafafb;
+}
+.order-box .order-item{
+  width: 100%;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.order-box .order-item .order-tit .null-tap{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 111
+}
+.order-box .order-item .order-tit{
+  padding: 20rpx 30rpx;
+  position: relative;
+}
+/* .order-box .order-item .order-tit .order-num{} */
+.order-box .order-item .order-tit .order-time{
+  font-size: 25rpx;
+}
+.order-box .order-item .goods-num-price{
+  padding: 20rpx;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #f6f6f9;
+}
+.order-box .order-item .goods-num-price text.red{
+      color: #EC5151;
+}
+.order-box .order-item .goods-box .null-tap{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 111
+}
+.order-box .order-item .goods-box{
+  padding: 20rpx;
+  background:#f8f8f8;
+  /*display: flex;*/
+  align-items: center;
+  position: relative;
+}
+.order-box .order-item .goods-box .goods-img{
+  flex: 1;
+  display: flex;
+  padding-bottom:10rpx;
+  margin-top:10rpx;
+  border-bottom:1px solid #fff;
+}
+.order-box .order-item .goods-box .last{
+  border-bottom:none;
+  padding-bottom:0;
+}
+.order-box .order-item .goods-box .goods-img image{
+  width:70px;
+  margin-right: 30rpx;
+}
+.goods-img .pro{
+  width:50%;
+}
+.goods-img .pro text{
+  display: block;
+  height: 45rpx;
+  margin-bottom: 5rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.goods-img .pro .goods_name{
+  width: 100%;
+  display: block;
+  color: #333;
+}
+.goods-img .pro .goods_detail{
+  width: 100%;
+  display: block;
+  color: #999;
+  font-size: 26rpx;
+}
+.order-box .order-item .order-tit .order-num text.tit{
+  color: #777
+}
+.order-box .order-item .order-option{
+  padding: 20rpx;
+  border-top: 1px solid #f6f6f9;
+  height:70rpx;
+}
+/* .order-box .order-item .order-option .order-status{
+  flex: 1;
+  font-size: 30rpx;
+  color: #EC5151;
+} */
+.order-box .order-item .order-option .cancel-btn{
+  font-size: 30rpx;
+  background: #EC5151;
+  color: #fff;
+  width:210rpx;
+  float:right;
+  margin-left:30rpx;
+  height:70rpx;
+  line-height:70rpx;
+}
+.order-box .order-item .order-option .pay-btn{
+  font-size: 30rpx;
+  background: #F5751D;
+  color: #fff;
+  width:210rpx;
+  float:right;
+  height:70rpx;
+  line-height:70rpx;
+}
+.order-box .order-item .order-option .back-btn{
+  font-size: 30rpx;
+  background: #EC5151;
+  color: #fff;
+  width:210rpx;
+  float:right;
+  margin-left:30rpx;
+  height:70rpx;
+  line-height:70rpx;
+}
+.bottom-tips{
+  text-align: center;
+  padding: 20rpx 0;
+}
+.bottom{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  display: flex;
+  flex-direction:row;
+}
+.loadMore{ 
+  text-align: center;
+}
+.loadMsg{
+  text-align: center;
+}
+.loadMore image{
+  display: block;
+  width:60rpx;
+  height:60rpx;
+  margin:0 auto;
+  margin-top: 20rpx;
+}
+.bottom .bottom-item{
+  flex:1;
+}
+.top{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  display: flex;
+  flex-direction:row;
+}
+/*蒙层支付*/
+.mask-filter-div{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background:rgba(0,0,0,.4);
+}
+.pay-block{
+  position: fixed;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  /*left:49rpx;*/
+  /*padding: 20rpx;*/
+  background: #fff;
+  z-index: 111;
+}
+.pay-block .pricePay{
+  text-align: center;
+  font-size: 46rpx;
+  padding:50rpx 0;
+}
+.pay-block .pricePay text{
+  font-size: 46rpx;
+  color:#000;
+}
+.pay-block .pricePay text span{
+  font-weight: 600;
+}
+.pay-block .orderInfoPay{
+  margin-left:26rpx;
+  padding:30rpx 20rpx 24rpx 0;
+  border-bottom:1px solid #eee;
+}
+.pay-block .orderInfoPay .left{
+  color:#666;
+}
+.pay-block .orderInfoPay .right{
+  float:right;
+  color: #333;
+}
+.pay-block .pro-title{
+  text-align: center;
+  font-size:30rpx;
+  padding:24rpx 0;
+  border-bottom:1px solid #eee;
+}
+.pay-block .wx-pay{
+  height:85rpx;
+  width:94%;
+  line-height:85rpx;
+  color:#fff;
+  border-radius: 3px;
+  margin-top:340rpx;
+  margin-bottom:30rpx;
+  font-size: 30rpx;
+}
+.pay-block  .close-btn{
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 20rpx;
+  top: -12px;
+  border-radius: 50%;
+  background: #fff;
+  padding:3px;
+}
+.pay-block  .close-btnson{
+  color: #666;
+  width: 21px;
+  height: 21px;
+  font-size: 18px;
+  border-radius: 50%;
+  border: 1px solid #666;
+  line-height: 21px;
+  text-align: center;
+}
+/*备用页面  */
+.share-page {
+    padding: 300rpx 25%;
+    color: #999;
+    background: #f8f8f8;
+    text-align:center;
+  }
+
+  .share-page  .iconfont {
+    font-size: 140rpx;
+  }
+
+  .share-page .p {
+    font-size: 14px;
+  }
+
+  .share-page .look-btn {
+    width: 140rpx;
+    height: 70rpx;
+    font-size: 14px;
+    border-radius: 3px;
+    margin-top: 30rpx;
+    background: #ff4f4f;
+    outline: none;
+    color: #ddd;
+  }

@@ -1,0 +1,136 @@
+/* favorite.wxss */
+.page{
+    font-family: Microsoft yahei;
+    background: #f8f8f8;
+}
+.fav-item{
+    width: 100%;
+    background:#fff;
+    border-top:1px solid #eee;
+    display: flex;
+    padding:20rpx 10rpx;
+}
+.fav-item .fav-icon{
+    width:12%;
+    text-align:center;
+    margin-top:75rpx;
+}
+.myicon{
+    color:#EC5151;
+    font-size: 16px;
+    margin-right: 15rpx;
+}
+.fav-item .goods-info{
+    width:88%;
+    display:flex;
+}
+.fav-item .goods-info  image{
+    width: 180rpx;
+    height: 180rpx;
+    border:1px solid #eee;
+    margin-right:30rpx;
+}
+.fav-item .goods-info .pro .goods_name{
+    display: block;
+    font-size:30rpx;
+    width:400rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom:20rpx;
+}
+.fav-item .goods-info .pro .goods_detail{
+    display: block;
+    font-size:26rpx;
+    color:#666;
+    margin-bottom:30rpx;
+}
+.fav-item .goods-info .pro .goods_price{
+    display: block;
+    font-size:30rpx;
+    color: red;
+}
+.bottom{
+    width:100%;
+    height:48px;
+    position:fixed;
+    left:0;
+    bottom:0;
+    border-top:1px solid #eee;
+    display: flex;
+    background: #fff;
+    z-index: 999;
+}
+.bottom .allselect{
+    width:50%;
+    /*float:left;*/
+    padding:20rpx 20rpx;
+    display:flex;
+    height:48px;
+}
+.bottom .allselect .fl{
+    width:20%;
+    text-align: center;
+    margin-right:10rpx;
+    margin-top:10rpx;
+}
+.bottom .allselect .sel-text{
+    font-size: 32rpx;
+    margin-top:10rpx;
+}
+.scroll-fav{
+    padding-bottom:50px;
+}
+.bottom-tit{
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    display: flex;
+    flex-direction:row;
+    font-size: 30rpx;
+}
+.loadMore{
+    text-align: center;
+}
+.loadMsg{
+    text-align: center;
+}
+.bottom-tit .bottom-item{
+    flex:1;
+}
+.cancel-btn{
+    width:50%;
+    background: #EC5151;
+    float:right;
+    height:49px;
+    color:#fff;
+    text-align: center;
+    line-height: 49px;
+    font-size: 32rpx;
+}
+.share-page {
+    padding: 300rpx 25%;
+    color: #999;
+    background: #F6F6F9;
+    text-align:center;
+}
+
+.share-page  .iconfont {
+    font-size: 140rpx;
+}
+
+.share-page .p {
+    font-size: 14px;
+}
+
+.share-page .look-btn {
+    width: 140rpx;
+    height: 70rpx;
+    font-size: 14px;
+    border-radius: 3px;
+    margin-top: 30rpx;
+    background: #ff4f4f;
+    outline: none;
+    color: #ddd;
+}

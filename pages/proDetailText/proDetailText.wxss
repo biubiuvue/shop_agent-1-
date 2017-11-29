@@ -1,0 +1,45 @@
+text{
+  font-family: Microsoft yahei;
+  font-size: 14px
+}
+view{
+    font-family: Microsoft yahei;
+  font-size: 14px
+}
+.page{
+    background: #fff;
+}
+.top-nav-bar{
+    width: 80%;
+    padding: 0 10%;
+    background: #EC5151;
+    color: #fff;
+    display: flex;
+}
+.top-nav-bar .item{
+    display: flex;
+    flex-direction: column-reverse;
+    flex: 1;
+    text-align: center;
+    padding: 30rpx 0;
+    font-size: 16px;
+    position: relative
+}
+.top-nav-bar .item.selected:after{
+   content: " ";
+    position: absolute;
+    left: 2rem;
+    right: 2rem;
+    bottom: 0;
+    height: 1.5px;
+    background: #fff;
+    z-index: 2;
+}
+.proDetailTit{
+    text-align: center;
+    border-bottom: 1px solid #F3F4F9;
+    padding:30rpx 0;
+}
+.proDetailNode{
+    padding:10px;
+}

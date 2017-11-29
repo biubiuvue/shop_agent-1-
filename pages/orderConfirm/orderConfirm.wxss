@@ -1,0 +1,339 @@
+.page{
+    color: #333;
+    font-family: Microsoft YaHei;
+    font-size: 14px;
+}
+.nonebg{
+  background: none
+}
+.address-manager{
+  width: 90%;
+  padding: 30rpx 5%;
+  position: relative;
+  background: #fff;
+}
+.address-manager .arrow-right{
+  display: block;
+  position: absolute;
+  width: 20rpx;
+  height: 20rpx;
+  border-top:1px solid #888; 
+  border-left:1px solid #888; 
+  right: 5%;
+  top: 50%;
+  z-index: 111;
+  transform: translate(-50%,-50%) rotate(135deg);
+}
+.address-manager .address-info{
+  display: flex;
+  align-items: center;
+}
+.address-manager .address-info text{
+  display: flex;
+  color: #666;
+  margin-right: 20rpx;
+ 
+}
+.address-manager .addressee text{
+  margin-right: 10rpx;
+  font-size: 14px;
+  width:40%;
+}
+.goods-item{
+  width: 100%;
+  background: #fff;
+}
+.goods-item .shop-name{
+  width: 90%;
+  padding: 30rpx 5%;
+  font-size: 35rpx;
+  border-bottom: 1px solid #f6f6f9;
+}
+.goods-item .goods-info image{
+  width: 240rpx;
+  height: 240rpx;
+  display: flex;
+  margin-right: 20rpx;
+  border: 1px solid #F6F6F9;
+}
+.goods-item .goods-info{
+  width: 92%;
+  margin: 0 4%;
+  display: flex;
+  align-items: flex-start;
+   border-bottom: 1px solid #f6f6f9;
+   padding: 30rpx 0;
+}
+.goods-item .goods-info .goods-info-de{
+  flex: 1;
+}
+.goods-item .goods-info .goods-info-de .goods-name{
+  display: block;
+  width: 100%;
+  height: 80rpx;
+  overflow: hidden;
+  font-size: 29rpx;
+}
+.goods-item .goods-info .goods-info-de .goods-price-num{
+  width: 100%;
+  display: flex;
+}
+.goods-item .goods-info .goods-info-de .goods-price-num text{
+  flex: 1;
+}
+.goods-item .goods-info .goods-info-de .goods-price-num .goods-price{
+  color: #EC5151;
+}
+.goods-item .goods-info .goods-info-de .goods-price-num .goods-num{
+  text-align: right;
+}
+.goods-item .express-style{
+  width: 92%;
+  margin: 0 4%;
+  display: flex;
+  align-items: center;
+   border-bottom: 1px solid #f6f6f9;
+   padding: 30rpx 0;
+   position: relative;
+}
+.goods-item .express-style .title{
+  display: flex;
+  flex: 1;
+  color: #000;
+  font-size: 14px;
+}
+.goods-item .express-style .express-detail{
+  display: flex;
+  flex: 1;
+  justify-content:flex-end;
+}
+.goods-item .express-style .express-detail .express-price{
+  color: #EC5151;
+}
+.goods-item .express-style text{
+  margin-right: 30rpx;
+}
+.goods-item .express-style .arrow-right{
+  display: block;
+  position: absolute;
+  width: 20rpx;
+  height: 20rpx;
+  border-top:1px solid #888; 
+  border-left:1px solid #888; 
+  right: 0;
+  top: 50%;
+  z-index:1;
+  transform: translate(-50%,-50%) rotate(135deg);
+}
+.total-num-price{
+  width: 92%;
+  margin: 0 4%;
+  display: flex;
+  align-items: center;
+   border-bottom: 1px solid #f6f6f9;
+   padding: 30rpx 0;
+   position: relative;
+   justify-content: flex-end;
+}
+.total-num-price text{
+  color: #777;
+  font-size: 15px;
+}
+.total-num-price .num{
+  display: flex;
+}
+.total-num-price .price{
+  display: flex;
+}
+.total-num-price .price text{
+  display: flex;
+}
+.total-num-price .price .price-num{
+  display: flex;
+  flex: 1;
+  color: #EC5151;
+}
+.pay-style-box{
+  width: 90%;
+  padding: 30rpx 5%;
+  background: #fff;
+  margin-top: 20rpx;
+  position: relative;
+}
+ .pay-style-box .title{
+  flex: 1;
+  font-size: 14px;
+  color:#000;
+} 
+.pay-style-box .pay-style-detail{
+  display: block;
+  width: 100%;
+  color: #666;
+  margin-bottom: 10rpx;
+}
+.pay-style-name{
+  color:#EC5151;
+}
+
+.pay-style-box .arrow-right{
+  display: block;
+  position: absolute;
+  width: 20rpx;
+  height: 20rpx;
+  border-top:1px solid #888; 
+  border-left:1px solid #888; 
+  right: 20rpx;
+  top: 50%;
+  z-index: 111;
+  transform: translate(-50%,-50%) rotate(135deg);
+}
+.cart-bottom-bar .total-price{
+  margin-left:10px;
+}
+
+.cart-bottom-bar .total-price .num{
+  color: #EC5151;
+}
+.cart-bottom-bar button{
+  width:190rpx;
+  line-height:100rpx;
+  height:100rpx;
+  text-align:center;
+  color:#fff;
+  font-size:16px;
+  border-radius:0px;
+  
+}
+.cart-bottom-bar{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  align-items:center;
+  background:#fff;
+  border-top:1px solid #e7e7e7;
+  height:100rpx;
+  line-height:100rpx;
+  z-index: 10;
+}
+.optionList{
+  margin-top: 20rpx;
+}
+.dispatchPicker{
+  width: 30%;
+  margin-right: 30rpx;
+  text-align: right;
+}
+.nonegoods{
+  text-align: center;
+}
+.addNewAddress{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    padding: 30rpx;
+    z-index: 6;
+    background: #fafafc;
+    border-top: 1px solid #efefef;
+}
+.addNewAddress button{
+    background: #EC5151;
+    border: 1px solid #df4141;
+    color: #fff;
+    font-size: 35rpx;
+}
+.addresslist{
+ border-bottom: 1px solid #F6F6F9;
+}
+.addresslist .top{
+  border-bottom: 1px solid #F6F6F9;
+  padding: 20rpx;
+  display: flex;
+}
+.addresslist .top .editbox{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end
+}
+.addresslist .top .edit-btn.green{
+    border: 1px solid slategray;
+    color: slategray
+}
+.addresslist .top .edit-btn.red{
+  border: 1px solid #EC5151;
+  color: #EC5151;
+}
+.addresslist .top .edit-btn{
+  padding: 8rpx 10rpx;
+  border-radius:10rpx; 
+  margin-right: 30rpx;
+}
+.addresslist .bottom{
+  padding: 40rpx
+}
+.addresslist .bottom .addressee{
+  margin-bottom: 20rpx;
+}
+.addresslist .bottom .address-info{
+  display: flex;
+  align-items: center;
+}
+.addresslist .bottom .address-info text{
+  display: flex;
+  color: #777;
+  margin-right: 20rpx;
+ 
+}
+.addresslist .bottom .addressee text{
+  margin-right: 10rpx;
+  font-size: 16px;
+}
+.address-tp{
+  overflow:hidden;
+  line-height: 44rpx;
+}
+.address-tp text.fr{
+  margin-right: 60rpx;
+}
+.address-content {
+  padding-right: 60rpx;
+  line-height: 44rpx;
+}
+.line{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width:100%;
+  height:4px;
+  background: url(http://ws7.wshoto.com/attachment/images/2/2017/01/address_bg.png) no-repeat center center;
+  background-size: 100%;
+  z-index: 50
+}
+.relpay{
+  width: 100%;
+  text-align: right;
+  font-size: 14px;
+  border-top:1px solid #EBEBEB;
+  color:#000;
+  padding-top: 10rpx;
+}
+.relpay .relpay-item{
+  color:#EC5151;
+}
+.weixinpay{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background: #19AD17;
+  color:#fff;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-top: 40rpx;
+}
+.delivery{
+  margin-right: 40rpx !important;
+}

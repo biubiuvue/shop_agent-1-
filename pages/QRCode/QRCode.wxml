@@ -1,0 +1,38 @@
+<!--QRCode.wxml-->
+<view class="page" style="{{windowHeight}}" wx:if="{{!onLoaded}}">
+    <view class="qrImg" style="{{windowHeight}}" wx:if="{{qrShow}}">
+        <view class="qrcode-item qrcode-tp" style="{{halfHeight}}">
+            <view>
+                <view class="qrcode-title">
+                    转发分享
+                </view>
+                <view class="remarks">
+                    <div class="remarks-content">
+                        转发至群或者好友，好友打开后，即可绑定上下级关系。
+                    </div>
+                </view>
+                <button open-type="share" class="myshare">点击分享</button>
+            </view>
+        </view>
+        <view class="qrcode-item qrcode-bt" style="{{halfHeight}}" bindtap="clickQrcodeItem">
+            <view>
+                <view class="qrcode-title qrcode-title2">
+                    保存二维码
+                </view>
+                <view class="remarks">
+                    <div class="remarks-content">
+                        打开图片二维码，长按保存至手机，即可分享朋友圈，好友打开后，即可绑定上下级关系。
+                        <!-- 点击图片二维码预览，长按保存至手机，即可分享朋友圈，好友打开后，即可绑定上下级关系。 -->
+                    </div>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:else class="share-page">
+        <span class="iconfont icon-wodefenxiaoshang"></span>
+        <text>{{qrData}}</text>
+    </view>
+</view>
+<view class="loadding" wx:if="{{onLoaded}}">
+    <image src="../../public/images/loadding.gif"></image>
+</view>

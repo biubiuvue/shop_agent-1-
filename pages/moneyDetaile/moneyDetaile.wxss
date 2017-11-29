@@ -1,0 +1,77 @@
+.index-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #f8f8f8;
+  font-family: Microsoft yahei;
+  padding:20rpx 0rpx 100rpx 0rpx;
+}
+.moneyDetail-content{
+  padding:0rpx 20rpx 20rpx 20rpx;
+}
+.moneyDetail-top{
+  height:250rpx;
+  background: #fff;
+  border-bottom:1px dashed #D0D0D0;
+  display: flex;
+  align-items: center;
+}
+.moneyDetail-nmb{
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  color:#A7BA2C;
+}
+.moneyDetail-title{
+  display: block;
+  width: 100%;
+  text-align: center;
+  color:#9F9F9F;
+  font-size: 14px;
+}
+.moneyDetail-bt{
+  padding:0rpx 10rpx 30rpx 10rpx;
+  background: #fff;
+}
+.moneyDetail-item{
+  margin-top: 20rpx;
+  color:#333;
+  font-size: 14px;
+}
+.moneyDetail-bt span{
+  color:#979797;
+  font-size: 14px;
+}
+
+.moneyDetail-state{
+  color:#1C5518
+}
+.none-goods{
+  padding-top: 100rpx;
+}
+.none-goods text{
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+}
+.none-goods .cart-icon{
+  width: 260rpx;
+  height: 260rpx;
+  background: #DFE0E8;
+  border-radius: 100%;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 50rpx;
+}
+.none-goods .cart-icon image{
+  width: 150rpx;
+  height: 150rpx;
+  left: 50%;
+  top: 50%;
+  position: relative;
+  transform: translate(-50%,-50%)
+}

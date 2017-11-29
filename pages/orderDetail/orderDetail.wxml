@@ -1,0 +1,91 @@
+<view class="page">
+  <view wx:if="{{!onLoaded}}">
+    <view class="address-manager">
+      <view class="addressee">
+        <text>{{addressArr.realname}}</text>
+        <text>{{addressArr.mobile}}</text>
+      </view>
+      <view class="address-info">
+        <text>{{addressArr.province}}</text>
+        <text>{{addressArr.city}}</text>
+        <text>{{addressArr.area}}</text>
+        <text>{{addressArr.address}}</text>
+      </view>
+    </view>
+    <view class="goods-item">
+      <view class="goods-info" wx:for="{{goodsArr}}" wx:key="{{index}}">
+        <image src="{{item.thumb}}" data-id="{{item.id}}" bindtap="proTap"/>
+        <view class="goods-info-de">
+          <view class="goods-name">{{item.title}}</view>
+            <view class="optionList">
+                <text>{{item.optionname}}</text>
+            </view>
+          <view class="goods-price-num">
+            <!--<text class="goods-price">￥{{item.marketprice}}</text>-->
+            <text class="goods-price">￥{{item.price}}</text>
+            <text class="goods-num">X{{item.total}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="express-style">
+      <view class="express-content">
+        <text class="title">配送方式</text>
+        <view>{{dispatchArr}}</view>
+      </view>
+      <view class="express-content">
+        <text class="title">运费</text>
+        <view>￥{{detail.dispatchprice}}</view>
+      </view>
+      <view class="express-content">
+        <text class="title">折扣</text>
+        <view>￥{{detail.dispatchprice}}</view>
+      </view>
+      <view class="express-content">
+        <text class="title">市场价</text>
+        <view>￥{{detail.goodsprice}}</view>
+      </view>
+      <view class="express-content last-content">
+        <text class="title">实付款</text>
+        <view>￥{{detail.price}}</view>
+      </view>
+    </view>
+
+  </view>
+  <!-- loadding -->
+  <view class="loadding" wx:if="{{onLoaded}}">
+    <image src="../../public/images/loadding.gif"></image>
+  </view>
+</view>
+
+<view class="cart-bottom-bar">
+  <block wx:if="{{detail.status==0}}">
+    <button class="cancel-btn" bindtap="confirmPay" data-id="{{detail.id}}" data-ordersn="{{detail.ordersn}}" data-price="{{detail.goodsprice}}">确认支付</button>
+    <button class="pay-btn" bindtap="cancelOrdertap" data-id="{{detail.id}}" data-ordersn="{{detail.ordersn}}" data-price="{{detail.goodsprice}}">取消订单</button>
+  </block>
+  <button class="cancel-btn" bindtap="drawback" data-orderid="{{detail.id}}" data-price="{{detail.goodsprice}}" wx:if="{{detail.canrefund && detail.refundid==0}}">申请退款</button>
+  <button class="cancel-btn" bindtap="drawbackInfo" data-refundid="{{detail.refundid}}" wx:if="{{detail.canrefund && detail.refundid!=0}}">退款申请中</button>
+  <block wx:if="{{detail.status==2}}">
+    <button class="cancel-btn" bindtap="confirmMark" data-orderid="{{detail.id}}">确认收货</button>
+  </block>
+  <block wx:if="{{detail.status==2 || detail.status==3}}">
+    <button class="pay-btn" bindtap="lookTrace" data-orderid="{{detail.id}}" data-express="{{item.express}}" data-expresssn="{{item.expresssn}}">查看物流</button>
+  </block>
+
+  <!--弹出选择支付蒙板-->
+  <view class="mask-filter-div" hidden="{{hidden}}"></view>
+  <view class="pay-block" hidden="{{hidden}}">
+    <view class="close-btn">
+      <view class="close-btnson" bindtap="hideStandard">×</view>
+    </view>
+    <view class="pro-title">继续支付</view>
+    <view class="pricePay">
+      <text>￥{{detail.price}}</text>
+    </view>
+    <view class="orderInfoPay">
+      <text class="left">订单编号</text>
+      <text class="right">{{ordersn}}</text>
+    </view>
+    <button type="primary" class="wx-pay" bindtap="payTap">微信支付</button>
+  </view>
+</view>

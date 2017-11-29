@@ -1,0 +1,53 @@
+<view class="page" style="{{windowHeight}}" wx:if="{{!onLoaded}}">
+  <view class="user-item">
+    <input class="user-ipt" placeholder="昵称" type="text" value="{{nickname}}" placeholder-style="color:#727272;font-size:14px"
+      bindinput="getNickName" disabled="true"></input>
+    <view class="deltriangle"></view>
+  </view>
+  <!-- <view class="user-item">
+    <input class="user-ipt" placeholder="手机号码" type="number" value="{{mobile}}" placeholder-style="color:#727272;font-size:14px"
+      maxlength="11" bindinput="getUserTel"></input>
+    <view class="deltriangle"></view>
+  </view> -->
+  <view class="user-item">
+    <input class="user-ipt" placeholder="微信号" type="text" value="{{weixin}}" placeholder-style="color:#727272;font-size:14px"
+      bindinput="getWeixin"></input>
+    <view class="deltriangle"></view>
+  </view>
+  <view class="user-item" style="display:none">
+    <input class="user-ipt" placeholder="支付宝真实姓名" type="text" value="{{alipay_name}}" placeholder-style="color:#727272;font-size:14px"
+      bindinput="getAlipayName"></input>
+    <view class="deltriangle"></view>
+  </view>
+   <view class="user-item" style="display:none">
+    <input class="user-ipt" placeholder="支付宝账号" type="text" value="{{alipay_account}}" placeholder-style="color:#727272;font-size:14px"
+      bindinput="getAlipayAccount"></input>
+    <view class="deltriangle"></view>
+  </view>
+  <view class="user-item">
+    <input class="user-ipt" placeholder="真实姓名" type="text" value="{{realname}}" placeholder-style="color:#727272;font-size:14px"
+      bindinput="getRealName"></input>
+    <view class="deltriangle"></view>
+  </view>
+  <view class="user-item">
+    <input class="user-ipt" placeholder="所在城市" type="text" value="{{userCity}}" placeholder-style="color:#727272;font-size:14px"
+      disabled="true"></input>
+    <view class="deltriangle"></view>
+    <picker mode="region" bindchange="getCity" class="disview">
+      <view class="picker" class="disview"> </view>
+    </picker>
+  </view>
+  <view class="user-item">
+    <input class="user-ipt" placeholder="出生日期" type="text" value="{{birth}}" placeholder-style="color:#727272;font-size:14px"
+      disabled="true"></input>
+    <view class="deltriangle"></view>
+    <picker mode="date" start="{{startYear}}" end="{{endYear}}" bindchange="getBirth" class="disview">
+      <view class="picker disview"></view>
+    </picker>
+  </view>
+  <view class="sendUserInfo" bindtap="sendUserInfo">保存</view>
+</view>
+<!-- loadding -->
+<view class="loadding" wx:if="{{onLoaded}}">
+    <image src="../../public/images/loadding.gif"></image>
+</view>

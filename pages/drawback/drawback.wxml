@@ -1,0 +1,20 @@
+<!--drawback.wxml-->
+<view class="page">
+  <view class="refund-content">
+    <view class="picker">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          <text>退款原因</text> {{array[index]}}
+        </view>
+      </picker>
+    </view>
+    <view class="refund-price">
+      <text clss="back-text">退款金额</text> {{refundMoney}}
+    </view>
+    <view class="refund-description">
+      退款说明  <input type="text" bindinput="makeContent" placeholder="选填" value="" />
+    </view>
+  </view>
+  <button class="drawback-confirm" bindtap="confirmRefund">确认</button>
+  <!-- <view class="classname">{{content}}</view> -->
+</view>

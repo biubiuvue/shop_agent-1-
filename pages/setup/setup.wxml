@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="top-nav-bar">
+    <i class="back-btn" bindtap="backuptap"></i>
+    <view class="item goods selected">设置</view>
+  </view>
+  <view class="setup-list">
+    <view class="list-item" bindtap="addeditTap" data-edit="1">
+      设置收货地址
+    </view>
+    <view class="list-item" bindtap="scanTap" data-edit="1">
+      扫码
+    </view>
+  </view>
+</view>

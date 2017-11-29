@@ -1,0 +1,1 @@
+<view class="my-animation" style="overflow:hidden" animation="{{animationData}}" style="height:{{windowHeight}}px;width:{{windowWidth}}px" ></view>

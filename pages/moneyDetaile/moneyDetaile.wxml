@@ -1,0 +1,30 @@
+<scroll-view scroll-y="true" class="index-scroll" bindscrolltolower="pullUpLoad" style="{{windowHeight}}" wx:if="{{!onLoaded}}">
+  <view class="moneyDetail-contentlists" wx:for="{{moneylist}}" wx:if="{{!(moneylist.lengt>0?true:false)}}" wx:key="{{index}}">
+    <view class="moneyDetail-content">
+      <view class="moneyDetail-top">
+        <span class="moneyDetail-nmb">￥{{item.commission}}</span>
+      </view>
+      <view class="moneyDetail-bt">
+        <view class="moneyDetail-mode moneyDetail-item">
+          <span>提现方式：</span> 微信钱包
+        </view>
+        <view class="moneyDetail-time moneyDetail-item">
+          <span>提现时间：</span> {{item.applytime}}
+        </view>
+        <view class="moneyDetail-state moneyDetail-item">
+          <span>提现状态：</span> {{item.statusstr}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="none-goods" wx:if="{{!(moneylist.length>0?true:false)}}">
+    <view class="cart-icon">
+      <image src="../../public/images/nomx.png" />
+    </view>
+    <text>暂无相关信息</text>
+  </view>
+</scroll-view>
+<!-- loadding -->
+<view class="loadding" wx:if="{{onLoaded}}">
+    <image src="../../public/images/loadding.gif"></image>
+</view>

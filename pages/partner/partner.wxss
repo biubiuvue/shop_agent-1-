@@ -1,0 +1,139 @@
+/* partner.wxss */
+.page{
+    font-family: "Microsoft yahei";
+}
+.search{
+    height:110rpx;
+}
+.search .position{
+    height:110rpx;
+    padding:20rpx;
+    display: flex;
+    position: absolute;
+}
+.search .icon-search{
+    position: absolute;
+    width:40rpx;
+    height:70rpx;
+    left:24rpx;
+    top:19rpx;
+    background:#fff url(../../public/images/search.png) no-repeat left center ;
+}
+.search input{
+    /*background: #fff;*/
+    box-sizing: border-box;
+    padding-left: 50rpx;
+    height:70rpx;
+    font-size:24rpx;
+    border-radius: 3px;
+    background:#fff ;
+    width:610rpx;
+}
+.search .search-btn{
+    display: inline-block;
+    width:100rpx;
+    height:70rpx;
+    background: #ec5151;
+    line-height: 70rpx;
+    color:#fff;
+    text-align: center;
+    font-size:28rpx;
+    border-radius:3px;
+}
+.header-tap{
+    box-sizing: border-box;
+    background: #fff;
+    padding:20rpx 0;
+    width:100%;
+    display:flex;
+    border-top:1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.header-tap view{
+    width:33%;
+    text-align: center;
+    border-right:1px solid #eee;
+}
+.header-tap view.last{
+    border-right:none;
+}
+.header-tap view image{
+    width:42rpx;
+    height:36rpx;
+    line-height:36rpx;
+    margin-right:10rpx;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAASCAYAAAC0EpUuAAACkklEQVQ4T2NkwAI2bNhgy87OXsXLy6vBxcX17uXLl68eP35cmZaWdgGbenQxRnSB6dOnK+jr65+wtLQUR5Y7evTog9u3bxsmJiZ+IGQwhqFr1qzp9vX1LWFjY0PR+/nzZ4bt27eXhoeH95Bj6ILg4OB4LBo/7tixw+7x48eCILm/f/8+zMzMfIDNAgyXbtiwYYW/v384uuJz5849ZWJi4hQTExMCyb169erd3bt354WEhJQSDNNdu3YdcHV1tUdW+PbtW4afP38ySElJoeh/+vTplzNnzngFBAQcRpbAcOn69evTdHV1W5SVlUVhCs+cOcNgYmKCNSjXrl27MCQkJAGvoSBJdNcePnz4pq2trTo2U4k2FJROlZWVl+ro6MiCDNq9e/dB9CCBWbB169aNPj4+AQRdOn/+fAE5ObkdTk5O5gwMDBt37NjB4eHh4Y7NpTt27Njp6enpgdPQFStW+PDz82fLycmZqKioiEDTauCMGTMu6OrqHrC2tpZHyxAPL1++7ICetMARBXIZHx/fLnNzc01paWkeJI0fGRkZBUD8NWvWLPD19Y2HZYpfv34xbN68GSOSQGoZQdlSWVl5m729vSZ6LmJgYJjIyMhYALNYVlb2rLOzsxKIv3fv3nuPHz82xpZtGbds2bLB29vbH0fWU2RkZHwAslhUVDRLVFTU187OTgOk9tChQzdev369+fXr19MwvL9v3z4vNjY2NWyGXrt27YCUlFSDoqKiNVIYw5WCguDOnTtv7t27d+TJkyeFMMMxEj9Mx8qVK0uUlJTSTUxMVAgVICD5M2fO3Ll3795MUIGD1VBQKtDT01upqanJRYyBMDXXr1//dunSpXBchu6TlZVVJMVAmNpHjx69BwC6gwApgWQmsAAAAABJRU5ErkJggg==");
+}
+.header-tap view.active image{
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAASCAYAAAC0EpUuAAACEElEQVQ4T5VUO2hUQRQ9Z94WKhbZuKuVaETUlKJgIX46JbiZsUoZKwVtFJJCKws7bWwEG9FC0CrzEEQtJKKFjZBSQSQpbLK6a0CsdufIe9ldNu+NbjLd3M+5d849d4jIaVl7qgvcInkEQEvSaoW8WfV+KRZftLFoaDu3vwN8JLlng09aToCjVe9/jQIugf609q7IObDgkiBpvp6m97YMuurcY0PORhLXTLd7mklSzX3SStX75ViBUqdNa5/RmJlScAjfQW4HMN7ztSg92pWm8yM5bTq3SPJMgc/1a4ESSb8TaWo8Td8Px5c7nZ6+DGPukKwPAqUSYN8XpCe7vb/0X9DMWexW0heSh2P8bRo002kgn4Lcuz4TvStR0qsgKa1770Z22nZurCO9ojEnAKQIYRuMOReVUgiva2l6/p+gzUbjAoy5BuA4yVo+GOliAix1gGyA+4aTJa1UgLNFaeWDyjrrAm8ETJLcOZS4VltYGMvuuX6B2YECJASgNKRcJPlaSi9JTka26H7N++v9wh3gE8kDPZ6/VYBjsbVl0zlP0sb4SqSJ7GlZ4SBdFdCAMdknA4TwmcALQz4oPb9l7VSXPBQDrQCLHeA2pJMDjjeSminjB8kPCXCjD14Sfz+nae0cgSsw5mB06kVjCF8FPMw+nChopgIa8xzG7NgU4GC9wh+FMBMHtfatISe2BNgLDkD7L4w63j1p/rPBAAAAAElFTkSuQmCC");
+}
+.header-tap view text{
+    font-size:28rpx;
+    color:#666;
+}
+.header-tap view.active text{
+    color:#ec5151;
+}
+.p-list {
+    position: absolute;
+    width: 100%;
+}
+
+.p-cell {
+    display: flex;
+    height: 156rpx;
+    width: 100%;
+    padding: 20rpx 40rpx;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    margin-bottom: 10rpx;
+}
+.first{
+    border-top: none;
+}
+.info {
+    flex: 4;
+    text-align: left;
+    margin-left: 20rpx;
+    position: relative;
+}
+.info .h5 {
+    margin-top: 20rpx;
+    color: #27272f;
+    font-size: 28rpx;
+
+}
+
+.info span {
+    font-size: 28rpx;
+    color: #666;
+}
+.logo {
+    flex: 1;
+}
+.logo image {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    display: block;
+    margin: 10% auto;
+}
+.usertime {
+    position: absolute;
+    right: 64rpx;
+    bottom: 10rpx;
+    font-size: 24rpx;
+}
+/*备用页面  */
+.share-page {
+    padding: 300rpx 25%;
+    color: #999;
+    background: #f8f8f8;
+    text-align:center;
+}
+.share-page  .iconfont {
+    font-size: 140rpx;
+}
+.share-page .p {
+    font-size: 14px;
+}

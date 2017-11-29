@@ -1,0 +1,114 @@
+/* QRCode.wxss */
+.page{
+    /*background: url('../../public/images/fake.jpg') ;*/
+    font-family: "Microsoft yahei";
+}
+/*.fake{*/
+    /*background:rgba(22,61,74,0.4);*/
+/*}*/
+/*.info{*/
+    /*width:100%;*/
+    /*padding:60rpx 0;*/
+    /*text-align: center;*/
+/*}*/
+/*.info image{*/
+    /*width:160rpx;*/
+    /*height:160rpx;*/
+    /*border-radius: 50%;*/
+/*}*/
+/*.info text{*/
+    /*display: block;*/
+    /*font-size: 30rpx;*/
+    /*margin-top:10rpx;*/
+    /*color:#ccc;*/
+/*}*/
+/*.info .qrbox{*/
+    /*box-sizing: border-box;*/
+    /*display: inline-block;*/
+    /*width:400rpx;*/
+    /*height:400rpx;*/
+    /*margin-top:200rpx;*/
+    /*background: rgba(255,255,255,.7);*/
+    /*border-radius: 40rpx;*/
+    /*padding:40rpx;*/
+/*}*/
+/*.info .qrbox image{*/
+    /*width:320rpx;*/
+    /*height:320rpx;*/
+    /*border-radius: 0;*/
+/*}*/
+
+.qrImg{
+    width:100%;
+}
+.qrImg image{
+    width:100%;
+}
+.share-page{
+    background: #f8f8f8;
+    padding-top:400rpx;
+    text-align: center;
+}
+.share-page span{
+    font-size:200rpx;
+    color:#999;
+}
+.share-page text{
+    display: block;
+    margin-top:20rpx;
+    color:#555;
+    font-size:34rpx
+}
+
+
+/* 新增 */
+.qrcode-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.qrcode-title{
+    width:250rpx;
+    height: 250rpx;
+    background: #22BC01;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+    font-size: 40rpx;
+}
+.qrcode-title2{
+    background: #4CAFEA;
+}
+.myshare{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height:100%;
+    opacity: 0;
+}
+.remarks{
+    margin-top: 30rpx;
+    text-align: center;
+    font-size: 28rpx;
+    color:#666;
+    padding: 0rpx 100rpx;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+.remarks-title{
+    flex: 0 0 16%;
+}
+.qrcode-bt{
+    border-top:1px solid #eee;
+}
+.qrcode-bt .qrcode-img{
+    width:130rpx;
+    height: 130rpx;
+    margin: 0 auto;
+}

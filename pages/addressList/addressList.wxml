@@ -1,0 +1,41 @@
+<view class="page">
+    <!-- 分割块 -->
+    <view class="delblock"></view>
+    <!-- 收货地址列表 -->
+    <view class="address-list" wx:if="{{addressList.length>0?true:false}}">
+        <view class="address-list-item clearfix" wx:for="{{addressList}}" wx:key="{{index}}" catchtap="goOrderConfirm" data-index="{{index}}"
+            data-itemAds="{{item}}">
+            <view class="address-list-lf fl">
+                <icon type="success_circle" size="20" color="#EC5151" wx:if="{{item.selected}}" />
+                <icon type="circle" size="20" color="#EC5151" wx:else />
+            </view>
+            <view class="address-list-mid fl">
+                <view class="address-tp clearfix">
+                    <view class="address-name fl lr1">
+                        收货人：{{item.realname}}
+                    </view>
+                    <view class="address-phone fr lr1">
+                        电话：{{item.mobile}}
+                    </view>
+                </view>
+                <view class="address-bt lr2">
+                    {{item.address}}
+                </view>
+            </view>
+            <view class="address-list-lr fr" catchtap="goEditAddress" data-itemAds="{{item}}">
+                编辑
+            </view>
+        </view>
+    </view>
+    <!-- 新增收货地址 -->
+    <view class="addAddress" bindtap="addAddress">
+        新增收货地址
+    </view>
+    <!-- 没有地址时候 -->
+    <view class="empty" wx:if="{{!(addressList.length>0?true:false)}}">
+        <view class="empty-icon">
+            <image src="../../public/images/noaddress.png" />
+        </view>
+        <text>暂无收货地址</text>
+    </view>
+</view>

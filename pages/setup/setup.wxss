@@ -1,0 +1,42 @@
+/* setup.wxss */
+text,view{
+   font-family: Microsoft yahei;
+}
+.top-nav-bar{
+    width: 80%;
+    padding: 0 10%;
+    background: #EC5151;
+    color: #fff;
+    display: flex;
+    position: relative;
+}
+.top-nav-bar .back-btn{
+  display: block;
+  position: absolute;
+  width: 25rpx;
+  height: 25rpx;
+  border-top:2px solid #fff; 
+  border-left:2px solid #fff; 
+  left: 8%;
+  top: 50%;
+  z-index: 111;
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+.top-nav-bar .item{
+    display: flex;
+    flex-direction: column-reverse;
+    flex: 1;
+    text-align: center;
+    padding: 30rpx 0;
+    font-size: 16px;
+    position: relative
+}
+/* .setup-list{} */
+.setup-list .list-item{
+  padding: 30rpx 0;
+  margin: 0 auto;
+  border-bottom: 1px solid #eee;
+  width: 95%; 
+  text-align: left;
+  font-size: 30rpx;
+}

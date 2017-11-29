@@ -1,0 +1,160 @@
+<view class="center-body" style="{{windowHeight}};">
+    <view class="header-box">
+      <view class="header-content">
+        <view class="vip-info-bg" id="info-box">
+          <view class="user-header-pic margin-sm">
+            <image wx:if="{{!default}}" src="{{userInfo.avatarUrl}}" />
+            <image wx:else src="{{defaultImg}}" />
+          </view>
+          <view class="pull-left margin-sm section">
+            <view class="flex-wrp user" style="flex-direction:column">
+              <view class="flex-item username" wx:if="{{!default}}">{{userInfo.nickName}}</view>
+              <view class="flex-item username" wx:if="{{default}}">{{defaultName}}</view>
+              <view class="flex-item userlevel" wx:if="{{level}}">{{level}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="user-nav-box">
+          <view class="nav-left" bindtap="enterSCtap">
+            收藏
+          </view>
+          <view class="nav-right" bindtap="enterGZtap">
+              足迹
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="text-center">
+      <!-- 分割块 -->
+      <view class="delblock"></view>
+      <view class="order" bindtap="orderTap" data-status="">
+        <view class="left-item">
+          <!-- <image class="order-icon" src="../../public/images/myorder.png" /> -->
+          <span class="myorder">我的订单</span>
+        </view>
+        <view class="right-item">
+          <span class="myorder-all">全部订单</span>
+          <span class="arrow"></span>
+        </view>
+      </view>
+      <view class="mydingdan">
+          <view class="mydingdan-list" data-status="0" bindtap="orderTap">
+            <view class="dingdan-icon ">
+              <image src="../../public/images/dfk.png" />
+              <span class="num">{{status0Num}}</span>
+            </view>
+            <text>待付款</text>
+          </view>
+          <view class="mydingdan-list" data-status="1" bindtap="orderTap">
+            <view class="dingdan-icon ">
+              <image src="../../public/images/yfk.png" />
+              <span class="num">{{status1Num}}</span>
+            </view>
+            <text>已付款</text>
+          </view>
+          <view class="mydingdan-list" data-status="2" bindtap="orderTap">
+            <view class="dingdan-icon ">
+              <image src="../../public/images/dhh.png" />
+              <span class="num">{{status2Num}}</span>
+            </view>
+            <text>待收货</text>
+          </view>
+          <view class="mydingdan-list" data-status="3" bindtap="orderTap">
+            <view class="dingdan-icon ">
+              <image src="../../public/images/ywc.png" />
+              <span class="num">{{status3Num}}</span>
+            </view>
+            <text>已完成</text>
+          </view>
+        </view>
+      <!-- 分割块 -->
+      <view class="delblock"></view>
+      <!-- <view class="order">
+        <view class="left-item"> -->
+          <!-- <image class="order-icon" src="../../public/images/mymoney.png" /> -->
+          <!-- <span class="myorder">我的钱包</span>
+        </view> -->
+        <!--<view class="right-item">-->
+        <!--<span class="myorder-all" bindtap="depositTap">资金充值</span>-->
+        <!--<span class="arrow"></span>-->
+        <!--</view>-->
+      <!-- </view> -->
+      <!-- <view class="mydingdan">
+        <view class="mywallet">
+          <view class="wallet-top">{{yue}}</view>
+          <text>余额</text>
+        </view>
+        <view class="mywallet">
+          <view class="wallet-top">0.00</view>
+          <text>红包</text>
+        </view>
+        <view class="mywallet">
+          <view class="wallet-top">{{jifen}}</view>
+          <text>积分</text>
+        </view>
+      </view> -->
+    </view>
+    <!-- 分割块 -->
+    <!-- <view class="delblock"></view> -->
+    <!--<view class="order" bindtap="myshareTap">
+      <view class="left-item">
+        <image class="order-icon" src="../../public/images/myshare.png" />
+        <span class="myorder">我的分享</span>
+      </view>
+      <view class="right-item">
+        <span class="arrow"></span>
+      </view>
+    </view>-->
+    <!--<view class="order" bindtap="goCoupon">-->
+        <!--<view class="left-item">-->
+            <!--&lt;!&ndash; <image class="order-icon" src="../../public/images/aboutUs.png" />  &ndash;&gt;-->
+            <!--<span class="myorder">优惠券</span>-->
+        <!--</view>-->
+        <!--<view class="right-item">-->
+            <!--<span class="arrow"></span>-->
+        <!--</view>-->
+    <!--</view>-->
+    <view class="order" bindtap="goDistributionCenter">
+      <view class="left-item">
+        <!-- <image class="order-icon" src="../../public/images/choukuan.png" /> -->
+        <span class="myorder">分销中心</span>
+      </view>
+      <view class="right-item">
+        <span class="arrow"></span>
+      </view>
+    </view>
+    <!--<view class="order" bindtap="myCode">-->
+    <!--<view class="left-item">-->
+    <!--<image class="order-icon" src="../../public/images/qrcode.png" />-->
+    <!--<span class="myorder">我的二维码</span>-->
+    <!--</view>-->
+    <!--<view class="right-item">-->
+    <!--<span class="arrow"></span>-->
+    <!--</view>-->
+    <!--</view>-->
+    <view class="order" bindtap="aboutUs">
+      <view class="left-item">
+        <!-- <image class="order-icon" src="../../public/images/aboutUs.png" />  -->
+        <span class="myorder">关于我们</span>
+      </view>
+      <view class="right-item">
+        <span class="arrow"></span>
+      </view>
+    </view>
+    <!-- <view class="order" bindtap="helpTap">
+      <view class="left-item">
+        <image class="order-icon" src="../../public/images/helpcenter.png" />
+        <span class="myorder">帮助中心</span>
+      </view>
+      <view class="right-item">
+        <span class="arrow"></span>
+      </view>
+    </view>-->
+     <!-- 版权 -->
+    <view class="weui-footer weui-footer_fixed-bottom" wx:if="{{copyright.isShow}}">
+      <view class="weui-footer__links">
+        <navigator url="" class="weui-footer__link">{{copyright.cotitle1}}</navigator>
+      </view>
+      <view class="weui-footer__text">{{copyright.cotitle2}}</view>
+    </view>
+</view>

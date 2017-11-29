@@ -1,0 +1,225 @@
+text,view{
+   font-family: Microsoft yahei;
+}
+.price{
+    color:#ED5B5B;
+}
+/* .flex-rap {
+   display:flex;
+   flex-flow:row rap;
+    margin-bottom: 30rpx;
+} */
+/* .flex-left {
+   width:300rpx;
+} */
+/* .flex-left image{
+    width:300rpx;
+    height:250rpx;
+ } */
+ .flex-rap {
+    height:260rpx;
+    padding:20rpx;
+    margin-bottom: 20rpx;
+    position: relative;
+    background: #fff;
+    /* margin-right: 8rpx; */
+ }
+.flex-left {
+    width: 42%;
+    height:260rpx;
+    text-align: left;
+ }
+ .flex-left image{
+    width: 100%;
+    height: 100%;
+ }
+/* .section .flex-right {
+   flex:1;
+   position:relative;
+   margin-left:20rpx;
+
+} */
+.section .flex-right {
+    flex:1;
+    position:relative;
+    margin-left:20rpx;
+    width: 55%;
+    margin-left: 3%;
+ }
+.title {
+   font-size:30rpx;
+   height:60rpx;
+   width:400rpx;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+/* .section{
+    width: 95%;
+    margin: 0 auto;
+} */
+
+.section{
+    overflow: hidden;
+    padding:0rpx 40rpx;
+    margin-top: 98rpx;
+}
+.section .flex-right .flex-item {
+    align-items: center;
+    width:98%;
+}
+.section .price icon {
+    margin-left:50rpx;
+
+}
+.section .flex-item view{
+    flex: 1;
+    font-size: 14px;
+}
+.section .flex-item .price {
+     padding-top:30rpx;
+    display: flex;
+}
+.section .old-price {
+    color:#AAAAAA;
+    font-weight:400;
+    font-size:26rpx;
+    margin-left:10rpx;
+    text-decoration: line-through;
+}
+.section .flex-right .sales {
+    padding-top:30rpx;
+    font-size:14px;
+    color:#A8A8A8;
+    display: flex;
+}
+.container {
+    padding:0;
+    background: #f8f8f8;
+}
+.btn-area{
+    width: 95%;
+    margin: 30rpx auto;
+    
+}
+.btn-area form{
+    width: 100%;
+    display: block
+}
+.btn-area form .form-box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start
+}
+.btn-area form .form-box .search-ipt{
+    flex:1;
+}
+.btn-area form .form-box .search-ipt input{
+    background: #F6F6F9;
+    height: 90rpx;
+    padding: 0 30rpx;
+    border-radius:  4px 0 0 4px;
+    font-size:30rpx;
+
+}
+.btn-area form .form-box button{
+    height: 90rpx;
+    line-height: 90rpx;
+
+
+    border-radius: 0 4px 4px 0;
+    background: #EC5151;
+    border: 1px solid #df4141!important;
+    color: #fff;
+    font-size: 30rpx;
+}
+    
+.top-nav-bar{
+    width: 80%;
+    padding: 0 10%;
+    background: #EC5151;
+    color: #fff;
+    display: flex;
+    position: relative;
+}
+.top-nav-bar .back-btn{
+  display: block;
+  position: absolute;
+  width: 25rpx;
+  height: 25rpx;
+  border-top:2px solid #fff; 
+  border-left:2px solid #fff; 
+  left: 8%;
+  top: 50%;
+  z-index: 111;
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+.top-nav-bar .item{
+    display: flex;
+    flex-direction: column-reverse;
+    flex: 1;
+    text-align: center;
+    padding: 30rpx 0;
+    font-size: 16px;
+    position: relative
+}
+.tips{
+  width: 90%;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 35rpx;
+}
+.screen{
+    width:100%;
+    border-bottom:1px solid #bfbfbf;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 999;
+    background: #fff;
+}
+.screen-item{
+    float: left;
+    width:25%;
+    height: 76rpx;
+    line-height:76rpx;
+    text-align: center;
+    font-size: 14px;
+    color:#232326;
+    position: relative;
+}
+.arrow-up{
+    position: absolute;
+    right:25%;
+    top: 28rpx;
+    width: 0;
+    height: 0;
+    border-left: 7rpx solid transparent;
+    border-right: 7rpx solid transparent;
+    border-bottom: 7rpx solid rgba(0, 0, 0, 1);
+}
+.arrow-down{
+    position: absolute;
+    right:25%;
+    top: 40rpx;
+    width: 0;
+    height: 0;
+    border-left: 7rpx solid transparent;
+    border-right: 7rpx solid transparent;
+    border-top: 7rpx solid rgba(0, 0, 0, 1);
+}
+.active{
+    color:#EC5151;
+}
+.active2{
+    border-bottom:7rpx solid #EC5151;    
+}
+.active3{
+    border-top:7rpx solid #EC5151;    
+}
+.topHieght{
+    margin-top:20rpx;
+}

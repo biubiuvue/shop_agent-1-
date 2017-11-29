@@ -1,0 +1,178 @@
+<scroll-view scroll-y="true" class="index-scroll" bindscrolltolower="pullUpLoad" style="{{windowHeight}}" wx:if="{{!onLoaded}}">
+  <!-- 搜索产品 -->
+  <view class="btn-area">
+    <form bindsubmit="searchProducts">
+      <view class="form-box">
+        <view class="search-ipt">
+          <input placeholder="输入关键字搜索" name="searchBox" value="{{defVal}}" />
+        </view>
+        <button formType="submit">搜索</button>
+      </view>
+    </form>
+  </view>
+  <view class="index_body">
+    <!-- banner图 -->
+    <view>
+      <!-- 添加自动播放 -->
+      <swiper class="index-swiper-block" indicator-dots="true" indicator-active-color="#EC5151" indicator-color="rgba(0, 0, 0, .2)" autoplay="true" interval="5000"
+      duration="1000" circular="true">
+        <block wx:for="{{SwiperimgUrls}}" wx:key="{{index}}">
+          <swiper-item>
+            <navigator url='{{item.link}}'>
+              <image src="{{item.thumb}}" mode="widthFix" class="slide-image top-swiper-img" data-link="{{item.link}}" data-id="{{item.id}}"
+                />
+            </navigator>
+           
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <!-- 小图标 -->
+    <view class="navigate-group">
+      <view class="flex-wrp" wx:for="{{nav_g_array}}" wx:key="{{index}}">
+        <view class="flex-item lr1">
+          <view class="class-lay" data-id="{{item.id}}" data-index="{{index}}" data-pid="{{item.parentid}}" bindtap="prolistTap"></view>
+          <view class="nav-img">
+            <image src="{{item.advimg}}" />
+          </view>
+          <text class="nav-name">{{item.name}}</text>
+        </view>
+      </view>
+    </view>
+    <!--  头条 -->
+    <!--<view class="headlines clearfix">
+      <view class="headlines-img fl">
+        <image src="../../public/images/tb.jpg"></image>
+      </view>
+      <swiper class="headlines-content fl" indicator-dots="{{false}}" autoplay="{{false}}" interval="{{3000}}" duration="{{5000}}" vertical="{{true}}" circular="{{true}}">
+        <block wx:for="{{headlinesList}}">
+          <swiper-item class="headlines-texts">
+            <view class="headlines-text">
+              <span class="headlines-text1 lr1">
+                <span class="headlines-hotwd">{{item.hotword1}}</span>
+                {{item.title1}}
+              </span>
+              <span class="headlines-text2 lr1">
+                <span class="headlines-hotwd">{{item.hotword2}}</span>
+                {{item.title2}}
+              </span>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>-->
+    <!-- 分割块 -->
+    <view class="delblock"></view>
+    <!-- 广告图 -->
+    <view class="banner">
+      <view class="banner_img">
+        <image src="{{bannerPicUrl}}" mode="widthFix" />
+      </view>
+    </view>
+  </view>
+  <!-- 分割块 -->
+  <view class="delblock"></view>
+  <!-- 热销商品 -->
+  <view class="hotpro">
+    <view class="hotpro-titile clearfix" bindtap="goProduct" data-attributes="ishot:1">
+      <view class="hotpro-titile-lf fl">
+        热销商品
+      </view>
+      <view class="hotpro-titile-lf fr">
+        查看更多
+      </view>
+      <view class="arrow-right"></view>
+    </view>
+    <!--  分割线  -->
+    <view class="delblock2"></view>
+    <scroll-view class="hotpro-content" scroll-x="true" style="width :710rpx">
+      <view class="hotpro-item" wx:for="{{hotPrds}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap="proTap">
+        <view class="hotpro-img">
+          <image src="{{item.thumb}}" />
+        </view>
+        <view class="hotpro-price clearfix">
+          <view class="hotpro-price-lf fl lr1">
+            {{item.title}}
+          </view>
+          <view class="hotpro-price-lr fr lr1">
+            ￥{{item.marketprice}}
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 分割块 -->
+  <view class="delblock"></view>
+  <!-- 最新产品 -->
+  <view class="pro-list clearfix">
+    <view class="hotpro-titile clearfix" bindtap="goProduct" data-attributes="isnew:1">
+      <view class="hotpro-titile-lf fl">
+        最新商品
+      </view>
+      <view class="hotpro-titile-lf fr">
+        查看更多
+      </view>
+      <view class="arrow-right"></view>
+    </view>
+    <view class="pro-content clearfix">
+      <view class="pro-list-item fl clearfix" wx:for="{{newPrds}}" wx:key="{{index}}">
+        <view class="pro-lay" data-id="{{item.id}}" bindtap="proTap"></view>
+        <!-- 左图 -->
+        <view class="pro-img">
+          <image src="{{item.thumb}}" />
+        </view>
+        <!-- 文字介绍 -->
+        <view class="pro-intro lr2">
+          <text>{{item.title}}</text>
+        </view>
+        <view class="pro-price">
+          <text>￥{{item.marketprice}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 分割块 -->
+  <!-- <view class="delblock"></view> -->
+  <!-- 推荐产品 -->
+  <view class="pro-list clearfix">
+    <view class="hotpro-titile clearfix" bindtap="goProduct" data-attributes="isrecommand:1">
+      <view class="hotpro-titile-lf fl">
+        推荐商品
+      </view>
+      <view class="hotpro-titile-lf fr">
+        查看更多
+      </view>
+      <view class="arrow-right"></view>
+    </view>
+    <view class="pro-content clearfix">
+      <view class="pro-list-item fl clearfix" wx:for="{{pro_list_arr}}" wx:key="{{index}}">
+        <view class="pro-lay" data-id="{{item.id}}" bindtap="proTap"></view>
+        <!-- 左图 -->
+        <view class="pro-img">
+          <image src="{{item.thumb}}" />
+        </view>
+        <!-- 文字介绍 -->
+        <view class="pro-intro lr2">
+          <text>{{item.title}}</text>
+        </view>
+        <view class="pro-price">
+          <text>￥{{item.marketprice}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="bottom" wx:if="{{hideBottom}}">
+    <view class="bottom-item loadMsg">{{loadMoreData}}</view>
+  </view>
+</scroll-view>
+<!-- loadding -->
+<view class="loadding" wx:if="{{onLoaded}}">
+  <image src="../../public/images/loadding.gif"></image>
+</view>
+<!-- gotop -->
+<view class="com-widget-goTop">
+  <view class="icon-gotop">
+    客服
+  </view>
+  <contact-button type="default-light" size="30" session-from="weapp" class="guest-button"></contact-button>
+</view>

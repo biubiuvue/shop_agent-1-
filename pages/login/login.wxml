@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="page">
+  <view class="logo">
+    <image src="../../public/images/logo.png"></image>
+  </view>
+  <view class="login-msg">
+    <view class="tel clearfix">
+      <view class="fl tel-lf">
+        <image src="../../public/images/tel-02.png"></image>
+      </view>
+      <input class="tel-lr fl" placeholder="请属于您的手机号码" maxlength="11" type="number" bindinput="loginMobileBind" auto-focus/>
+    </view>
+    <view class="short clearfix">
+      <view class="short-lf fl">
+        <image src="../../public/images/tel-01.png"></image>
+      </view>
+      <input class="short-mid fl" placeholder="请输入短信验证码" maxlength="6" type="number" bindinput="kapKeyBind" hover-class="other-button-hover"/>
+      <button class="short-lr fr" type="default" plain="true" size="mini" disabled="{{sendCodeDisabled}}" bindtap="sendCode" hover-class="other-button-hover"> {{sendCodeText}} </button>
+    </view>
+  </view>
+  <button class="login" type="button" size="default" loading="{{loginLoading}}" disabled="{{loginDisabled}}" bindtap="sendLogin"
+    hover-class="other-button-hover"> 登陆 </button>
+</view>

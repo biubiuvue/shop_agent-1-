@@ -1,0 +1,58 @@
+<scroll-view scroll-y="true" bindscrolltolower="pullUpLoad" class="container" style="{{windowHeight}}">
+  <!-- <view class="btn-area">
+    <form bindsubmit="searchTap">
+      <view class="form-box">
+        <view class="search-ipt">
+          <input placeholder="输入关键字搜索" name="searchBox" value="{{defVal}}" />
+        </view>
+        <button formType="submit">搜索</button>
+      </view>
+    </form>
+  </view> -->
+  <view wx:if="{{!onLoaded}}">
+    <!-- 筛选 -->
+    <view class="screen clearfix" wx:if="{{isShow}}">
+      <view class="screen-item {{_num==1?'active':''}}" data-num="1" bindtap="menuClick">
+        综合
+      </view>
+      <view class="screen-item {{_num==2?'active':''}}" data-num='2' bindtap="menuClick">
+        销量
+      </view>
+      <view class="screen-item {{_num==3?'active':''}}" data-num='3' bindtap="menuClick">
+        最新
+      </view>
+      <view class="screen-item {{_num==4?'active':''}}" data-num='4' bindtap="menuClick">
+        价格
+        <view class="arrow-up {{_snum1==true?'active2':''}}"></view>
+        <view class="arrow-down {{_snum2==true?'active3':''}}"></view>
+      </view>
+    </view>
+    <view wx:if="{{isFales}}" class="tips">您搜索的商品暂时不存在</view>
+    <view class="section {{hasTop==true?'topHieght':''}}">
+      <block wx:for="{{pro_list_arr}}" wx:key="{{index}}">
+        <view class="flex-rap clearfix" id="{{item.id}}" bindtap="proListTap">
+          <view class="flex-item flex-left fl">
+            <image src="{{item.thumb}}" mode="aspectFill" />
+          </view>
+          <view class="flex-item flex-right fr">
+            <view>
+              <view class="flex-item title lr1">{{item.title ? item.title : item.name}}</view>
+              <view class="flex-item sales">
+                <view>库存 {{item.total}}</view>
+                <view>销量 {{item.sales}}</view>
+              </view>
+              <view class="flex-item price">
+                <view>￥{{item.marketprice}}</view>
+                <view class="old-price">{{item.productprice}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- loadding -->
+  <view class="loadding" wx:if="{{onLoaded}}">
+    <image src="../../public/images/loadding.gif"></image>
+  </view>
+</scroll-view>

@@ -1,0 +1,181 @@
+/* logistics.wxss */
+
+page {
+  background: #f8f8f8;
+}
+
+text, view {
+  font-family: Microsoft yahei;
+  font-size: 14px;
+}
+
+.top-nav-bar {
+  width: 80%;
+  padding: 0 10%;
+  background: #ec5151;
+  color: #fff;
+  display: flex;
+  position: relative;
+}
+
+.top-nav-bar .back-btn {
+  display: block;
+  position: absolute;
+  width: 25rpx;
+  height: 25rpx;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  left: 8%;
+  top: 50%;
+  z-index: 222;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.top-nav-bar .item {
+  display: flex;
+  flex-direction: column-reverse;
+  flex: 1;
+  text-align: center;
+  padding: 30rpx 0;
+  font-size: 16px;
+  position: relative;
+}
+
+.traceSn {
+  margin-top: 20rpx;
+  background: #fff;
+  height: 120rpx;
+  line-height: 120rpx;
+  padding-left: 20rpx;
+  position: relative;
+}
+
+.traceSn .relative {
+  position: absolute;
+  left: 90rpx;
+  top: -2rpx;
+}
+
+.traceSn span {
+  font-size: 60rpx;
+}
+
+.product-info-box {
+  margin-top: 20rpx;
+  background: #fff;
+  padding: 0 20rpx;
+  height: 235rpx;
+  margin-bottom: 20rpx;
+}
+
+.pib-header {
+  text-align: left;
+  padding: 16rpx 10rpx;
+  border-bottom: 1px solid #ddd;
+  font-size: 30rpx;
+}
+
+.pib-header>span {
+  margin-right: 10rpx;
+}
+
+.good-info {
+  height: 110rpx;
+  padding: 16rpx 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.order-small {
+  width: 100rpx;
+  height: 100rpx;
+  border: 1px solid #ddd;
+}
+
+.good-info .order-small {
+  float: left;
+}
+
+.good-info .outp {
+  float: left;
+  margin-left: 16rpx;
+  font-size: 26rpx;
+  width:440rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.good-price {
+  float: right;
+  font-size: 26rpx;
+}
+
+.good-price .inp {
+  text-align: right;
+  margin-bottom: 4rpx;
+}
+
+.logistics-info {
+  background: #fff;
+  padding: 20rpx 30rpx;
+  margin-bottom: 20rpx;
+}
+
+/* .logistics-info .pib-header>span.iconfont{
+    font-size:30rpx;
+    line-height:.3rem;
+  }  */
+
+.logistics-info .ul {
+  margin: 10rpx 0;
+  margin-left: 10rpx;
+  padding-left: 60rpx;
+  text-align: left;
+  border-left: 1px solid #ddd;
+}
+
+.logistics-info .ul .li {
+  border-bottom: 1px solid #ddd;
+  padding: 10rpx 0;
+  padding-right: 60rpx;
+  font-size: 26rpx;
+  position: relative;
+  color: #888;
+}
+
+.logistics-info .ul .fcolor {
+  color: #f5751d;
+}
+
+.logistics-info .ul .li .b {
+  position: absolute;
+  left: -70rpx;
+  top: 10rpx;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background: #ddd;
+}
+
+.logistics-info .ul .fcolor .b {
+  background: #f5751d;
+}
+
+.logistics-info .ul .li .p {
+  line-height: 30rpx;
+}
+
+.logistics-info .ul .li .first {
+  margin-bottom: 30rpx;
+}
+
+.logistics-info .ul .last {
+  border-bottom: none;
+}
+
+.none-tran {
+  height: 20rpx;
+  padding: 40rpx;
+  text-align: center;
+  font-size: 30rpx;
+}

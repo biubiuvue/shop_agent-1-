@@ -1,0 +1,219 @@
+/* distributionOrder.wxss */
+.page{
+    font-family: "Microsoft yahei";
+}
+.search{
+    height:110rpx;
+}
+.search .position{
+    height:110rpx;
+    padding:20rpx;
+    display: flex;
+    position: absolute;
+}
+.search .icon-search{
+    position: absolute;
+    width:40rpx;
+    height:70rpx;
+    left:24rpx;
+    top:19rpx;
+    background:#fff url(../../public/images/search.png) no-repeat left center ;
+}
+.search input{
+    /*background: #fff;*/
+    box-sizing: border-box;
+    padding-left: 50rpx;
+    height:70rpx;
+    font-size:24rpx;
+    border-radius: 3px;
+    background:#fff ;
+    width:610rpx;
+}
+.search .search-btn{
+    display: inline-block;
+    width:100rpx;
+    height:70rpx;
+    background: #ec5151;
+    line-height: 70rpx;
+    color:#fff;
+    text-align: center;
+    font-size:28rpx;
+    border-radius:3px;
+}
+.header-tap{
+    box-sizing: border-box;
+    background: #fff;
+    padding:20rpx 0;
+    width:100%;
+    display:flex;
+    border-top:1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.header-tap view{
+    width:25%;
+    text-align: center;
+    border-right:1px solid #eee;
+}
+.header-tap view.last{
+    border-right:none;
+}
+.header-tap view image{
+    width:36rpx;
+    height:36rpx;
+    line-height:36rpx;
+    margin-right:6rpx;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAABLUlEQVQ4T62UwVHDMBBFd90AOXOBUxhuKSElfFNBSkgJoYOcOIcK9N1BaIBJCe4gYbhbmTWSRzEYCSa6eORZPf39/muVKy2NHAALVb0p4XrvP0ge0toeBGAbXp5KQCIyszqS61jfg+q63jvnloWQvmx85gIEYCUidymQ5PNPF+RAiyg7Hia5/zPo2q3dZ4A7kq19oH+ZDWBGcvKrjs0esuSce0uVAdiJyEZEDAaSth/WN1CSkcFkABAR21tEWu/9g6o+kjRwv4pyBGBNcmvPoOjkvb9tmualCGRj03XdU1VV7yRpe1MjIp+qOv8KN9usIjsYblyaojBOporWZupTtjUAGxtSVT0GwCpCJ83OBTKYbiqtpcnp98HIlPcaPchdcvE/Gs+ZiBx+C2EKPwMggL8TfuVq7QAAAABJRU5ErkJggg==");
+}
+.header-tap view.active image{
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAABb0lEQVQ4T62UQU4CMRSG32stYYOyVgd1ITCuOMIcgXgCjsAR8AasXOMN5gh4AcNu0I0E0LhzCC6wnbbmYSbpoAyjoZtmktevf//3v0HY08KU83QiWoj2qAjXWlzUX9TIrV2DxqeiT7tlGBcBobFVqmvOVTetX4MiTwz9mQqKQNKazTMZUOSJDkM8c4GNqbz57YJcEPmk8Vt2uvx5MvwzaK9PA8TzXKCUA/8NJtSgf5n9XIXqRQxbu5ox283S5Ty5d5VFnhiAUr3yCuJVRbT9mRr8yFHaAdds1+RHj7dLSz2UFR6gYRNrTcMccN+fyt6fcjSuiW5zqvq0WwsxAxNrbY+vXs1tIRApNKCvkeFDY6ZD+iY12sASuK2jNiEZT7DcZNNBKjIcAlK0HidSJVUIQgSuTztHJKqVekwnC8P4e3mpws9D0UmhW83eFUgy3SBvcW3D7dOPYBGz02+kvEs92HVJ5n+0OWflj2SUF0IX/gUaA+UTgYi6lAAAAABJRU5ErkJggg==");
+}
+.header-tap view text{
+    font-size:28rpx;
+    color:#666;
+}
+.header-tap view.active text{
+    color:#ec5151;
+}
+
+.p-cell {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0;
+    margin-top: 10rpx;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    width: 100%;
+}
+.up {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    padding: 0 20rpx;
+    line-height: 72rpx;
+
+}
+
+.up .ordernum {
+    font-size: 24rpx;
+}
+
+.up .time {
+    float: right;
+    font-size: 24rpx;
+
+}
+
+.down {
+    flex: 3;
+    height: 136rpx;
+    display: flex;
+    padding: 0 20rpx;
+}
+
+.logo {
+    flex: 1;
+    width: 86rpx;
+    height: 86rpx;
+    margin-top: 20rpx;
+    /*padding: 0.1rem 0;*/
+}
+
+.info {
+    flex: 4;
+    text-align: left;
+    margin-left: 20rpx;
+    padding: 10rpx 0;
+    color: #666;
+}
+
+.info .h5 {
+    margin-top: 20rpx;
+    color: #27272f;
+    font-size: 28rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 344rpx;
+
+}
+
+.info span {
+    font-size: 28rpx;
+    color: #666;
+}
+
+.logo image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    vertical-align: middle;
+    display: block;
+
+}
+
+.ordertype {
+    flex: 3;
+    padding: 10rpx 0;
+    color: #666;
+    max-width: 258rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ordertype span {
+    display: block;
+    text-align: right;
+    font-size: 28rpx;
+    margin-top: 10rpx;
+}
+
+.ordertype span:last-child {
+    margin-top: 20rpx;
+}
+/*加载*/
+.bottom{
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    display: flex;
+    flex-direction:row;
+}
+.loadMore{
+    text-align: center;
+}
+.loadMsg{
+    text-align: center;
+}
+.loadMore image{
+    display: block;
+    width:60rpx;
+    height:60rpx;
+    margin:0 auto;
+    margin-top: 20rpx;
+}
+.bottom .bottom-item{
+    flex:1;
+    font-size:28rpx;
+}
+/*备用页面  */
+.share-page {
+    padding: 300rpx 25%;
+    color: #999;
+    background: #f8f8f8;
+    text-align:center;
+}
+.share-page  .iconfont {
+    font-size: 140rpx;
+}
+.share-page .p {
+    font-size: 14px;
+}

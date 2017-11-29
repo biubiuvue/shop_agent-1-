@@ -1,0 +1,35 @@
+<view class="page" style="height:{{windowHeight}}px;width:{{windowWidth}}px">
+    <!-- 收货地址列表 -->
+    <view class="address-list" wx:if="{{addressList}}">
+        <view class="address-list-item clearfix" wx:for="{{addressList}}" wx:key="{{index}}">
+            <view class="address-list-content">
+                <view class="address-tp clearfix">
+                    <view class="address-name fl">
+                        收货人：{{item.realname}}
+                    </view>
+                    <view class="address-phone fr">
+                        电话：{{item.mobile}}
+                    </view>
+                </view>
+                <view class="address-bt lr2">
+                    {{item.address}}
+                </view>
+            </view>
+            <view class="remove-address clearfix">
+                <view class="remove-address-lf fl" bindtap="goEditAddress" data-myaddress='{{item}}'>
+                    编辑
+                </view>
+                <view class="remove-address-lr fr" bindtap="delAddress" data-index="{{index}}">
+                    删除
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 购物车没有物品 -->
+    <view class="none-goods" wx:if="{{addressList==''}}">
+        <view class="cart-icon">
+            <image src="../../public/images/noaddress.png" />
+        </view>
+        <text>地址空空如也，赶快去新增地址吧!</text>
+    </view>
+</view>

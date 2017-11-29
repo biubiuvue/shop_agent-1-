@@ -1,0 +1,207 @@
+<view class="distributionCenter page" wx:if="{{!onLoaded}}">
+    <view class="userinfo">
+        <view class="userinfo-tp" bindtap="goUserinfo">
+            <view class="userinfo-lf">
+                <view class="userphoto">
+                    <image src="{{avatar}}"></image>
+                </view>
+                <view class="userinfo-item">
+                    <view class="userinfo-p">
+                        昵称：{{nickname}}
+                    </view>
+                    <view class="userinfo-p">
+                        会员ID：{{id}}
+                    </view>
+                    <view class="userinfo-p">
+                        等级：{{level}}
+                    </view>
+                    <view class="userinfo-p">
+                        推荐人：{{from}}
+                    </view>
+                </view>
+            </view>
+            <view class="userinfo-lr deltriangle">
+                <view class="arrow-right arrow-box">
+                    <b class="right"><i class="right-arrow1"></i><i class="right-arrow2"></i></b>
+                </view>
+            </view>
+        </view>
+        <view class="userinfo-bt">
+            <view class="userinfo-cost">
+                推广费：{{c_money_sum}}元
+            </view>
+        </view>
+    </view>
+    <!-- 分割块 -->
+    <view class="delblock"></view>
+    <view class="partner">
+        <view class="mypartner">
+            <image src="../../public/images/hb.png"></image>
+            <span>我的伙伴</span>
+        </view>
+        <view class="partner-list">
+            <view class="partner-content" data-status="0" bindtap="partnerInfoTap">
+                <!-- <view class="partner-item">
+                    <view class="partner-tp">
+                        所有伙伴
+                    </view>
+                    <image src="../../public/images/syhb.png" class="partner-md"></image>
+                    <view class="partner-bt">
+                        {{all}}人
+                    </view>
+                </view> -->
+                <view class="mydingdan-list">
+                    <view class="dingdan-icon ">
+                        <image src="../../public/images/syhb2.png" />
+                        <span class="num">{{all}}</span>
+                    </view>
+                    <text> 所有伙伴</text>
+                </view>
+            </view>
+            <view class="partner-content" data-status="1" bindtap="partnerInfoTap">
+                <!-- <view class="partner-item">
+                    <view class="partner-tp">
+                        已购买伙伴
+                    </view>
+                    <image src="../../public/images/ygmhb.png" class="partner-md"></image>
+                    <view class="partner-bt">
+                        {{purchased}}人
+                    </view>
+                </view> -->
+                <view class="mydingdan-list">
+                    <view class="dingdan-icon ">
+                        <image src="../../public/images/ygmhb2.png" />
+                        <span class="num">{{purchased}}</span>
+                    </view>
+                    <text> 已购买伙伴</text>
+                </view>
+            </view>
+            <view class="partner-content" data-status="2" bindtap="partnerInfoTap">
+                <!-- <view class="partner-item last-item">
+                    <view class="partner-tp">
+                        未购买伙伴
+                    </view>
+                    <image src="../../public/images/syhb.png" class="partner-md"></image>
+                    <view class="partner-bt">
+                        {{no_purchased}}人
+                    </view>
+                </view> -->
+                <view class="mydingdan-list">
+                    <view class="dingdan-icon ">
+                        <image src="../../public/images/wgmhb2.png" />
+                        <span class="num">{{no_purchased}}</span>
+                    </view>
+                    <text> 未购买伙伴</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 分割块 -->
+    <view class="delblock"></view>
+    <view class="partner">
+        <view class="mypartner">
+            <image src="../../public/images/ddtg.png"></image>
+            <span>推广订单</span>
+        </view>
+        <view class="partner-list partner-list2">
+            <view class="partner-content" data-status="0" bindtap="distributionOrderInfo">
+                <!-- <view class="partner-item">
+                    <view class="partner-tp">
+                        全部
+                    </view>
+                    <image src="../../public/images/qb.png" class="partner-md"></image>
+                    <view class="partner-bt">
+                        {{total}}单
+                    </view>
+                </view> -->
+                <view class="mydingdan-list">
+                    <view class="dingdan-icon ">
+                        <image src="../../public/images/dfk.png" />
+                        <span class="num">{{total}}</span>
+                    </view>
+                    <text> 全部</text>
+                </view>
+            </view>
+            <view class="partner-content" data-status="1" bindtap="distributionOrderInfo">
+                <!-- <view class="partner-item">
+                    <view class="partner-tp">
+                        未结算
+                    </view>
+                    <image src="../../public/images/wjs.png" class="partner-md"></image>
+                    <view class="partner-bt">
+                        {{lock}}单
+                    </view>
+                </view> -->
+                <view class="mydingdan-list">
+                    <view class="dingdan-icon ">
+                        <image src="../../public/images/wjs2.png" />
+                        <span class="num">{{lock}}</span>
+                    </view>
+                    <text> 未结算</text>
+                </view>
+            </view>
+            <view class="partner-content" data-status="2" bindtap="distributionOrderInfo">
+                <!-- <view class="partner-item">
+                    <view class="partner-tp">
+                        已退款
+                    </view>
+                    <image src="../../public/images/tk.png" class="partner-md"></image>
+                    <view class="partner-bt">
+                        {{refund}}单
+                    </view>
+                </view> -->
+                <view class="mydingdan-list">
+                    <view class="dingdan-icon ">
+                        <image src="../../public/images/dhh.png" />
+                        <span class="num">{{refund}}</span>
+                    </view>
+                    <text> 已退款</text>
+                </view>
+            </view>
+            <view class="partner-content" data-status="3" bindtap="distributionOrderInfo">
+                <!-- <view class="partner-item last-item">
+                    <view class="partner-tp">
+                        已结算
+                    </view>
+                    <image src="../../public/images/yjs.png" class="partner-md"></image>
+                    <view class="partner-bt">
+                        {{ok}}单
+                    </view>
+                </view> -->
+                <view class="mydingdan-list">
+                    <view class="dingdan-icon ">
+                        <image src="../../public/images/ywc.png" />
+                        <span class="num">{{ok}}</span>
+                    </view>
+                    <text> 已结算</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 分割块 -->
+    <view class="delblock"></view>
+    <view class="goWithdrawals" bindtap="goWithdrawals">
+        <view class="goWithdrawals-lf">
+            <image src="../../public/images/mymoney.png" class="partner-md goWithdrawals-img"></image>
+            <text>推广费</text>
+        </view>
+        <view class="goWithdrawals-lr">
+            <text>去提现</text>
+            <text class="deltriangle"></text>
+        </view>
+    </view>
+    <view class="goWithdrawals" bindtap="goQrcode">
+        <view class="goWithdrawals-lf">
+            <image src="../../public/images/qr-icon.png" class="partner-md goWithdrawals-img"></image>
+            <text>我的二维码</text>
+        </view>
+        <view class="goWithdrawals-lr">
+            <text>去分享</text>
+            <text class="deltriangle"></text>
+        </view>
+    </view>
+</view>
+<!-- loadding -->
+<view class="loadding" wx:if="{{onLoaded}}">
+    <image src="../../public/images/loadding.gif"></image>
+</view>

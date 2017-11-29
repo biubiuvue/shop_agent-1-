@@ -1,0 +1,41 @@
+<!--logistics.wxml-->
+<view class="page" wx:if="{{!onLoaded}}">
+  <!-- <view class="top-nav-bar">
+    <i class="back-btn" bindtap="backuptap"></i>
+    <view class="item goods selected">查看物流</view>
+  </view> -->
+  <view class="traceSn">
+    <span class="iconfont icon-dingdan-copy"></span>
+    <view class="relative">运单编号:{{logisticSn}}</view>
+  </view>
+  <view class="product-info-box">
+    <view class="pib-header">
+      <span class="iconfont icon-wupin1"></span> 物品信息
+    </view>
+    <view class="good-info" wx:for="{{orderlist}}" wx:key="{{index}}">
+      <image src="{{item.thumb}}" alt="" class="order-small" data-id="{{item.id}}" bindtap="proTap"/>
+      <view class="outp">{{item.title}}</view>
+      <view class="good-price">
+        <view class="inp">￥{{item.price}}</view>
+        <view class="inp">×{{item.total}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="logistics-info">
+    <view class="pib-header">
+      <span class="iconfont icon-wuliu"></span> 物流跟踪
+    </view>
+    <view wx:for="{{logisticArr}}" wx:for-index="index" wx:if="{{!isShow}}" class="ul" wx:key="index">
+      <view class="li {{index==0?'fcolor':''}} {{index==logisticArr.length-1?'last':''}}">
+        <span class="b"></span>
+        <view class=" p first">{{item.context}}</view>
+        <view calss="p">{{item.time}}</view>
+      </view>
+    </view>
+    <view wx:if="{{isShow}}" class="none-tran">很抱歉！未查到相关物流信息</view>
+  </view>
+</view>
+<!-- loadding -->
+<view class="loadding" wx:if="{{onLoaded}}">
+  <image src="../../public/images/loadding.gif"></image>
+</view>

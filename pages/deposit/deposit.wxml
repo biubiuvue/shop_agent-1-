@@ -1,0 +1,8 @@
+<!--deposit.wxml-->
+<view class="page">
+  <input  placeholder="请输入充值金额" class="depositinp" bindblur="depositPrice" value=""/>
+  <button type="primary" class="depositbtn" bindtap="despositBtn">充值</button>
+  <view class="depositrec">
+    充值记录
+  </view>
+</view>

@@ -1,0 +1,25 @@
+<view class="page">
+    <!-- 配送方式列表 -->
+    <view class="delivery-list">
+        <view class="delivery-list-item clearfix" wx:for="{{dispatches}}" wx:key="{{index}}" data-index="{{index}}" bindtap="goOrderConfirm" data-dispatches="{{item}}">
+            <view class="delivery-list-lf fl">
+                <icon type="success" size="20" color="#EC5151" wx:if="{{item.isSelected}}"/>
+                <icon type="circle" size="20" color="#EC5151"  wx:else/>
+            </view>
+            <view class="delivery-list-mid fl">
+                {{item.dispatchname}}
+            </view>
+            <view>
+                {{isSelected}}
+            </view>
+            <view class="delivery-list-lr fl"> </view>
+        </view>
+    </view>
+    <!-- 没有配送方式时候 -->
+    <!-- <view class="empty" wx:if="{{!(addressList.length>0?true:false)}}">
+        <view class="empty-icon">
+            <image src="../../public/images/nogoods.png" />
+        </view>
+        <text>暂无配送方式</text>
+    </view> -->
+</view>

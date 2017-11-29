@@ -1,0 +1,64 @@
+.page{
+    background: #fff;
+    color: #333;
+    font-family: Microsoft YaHei;
+    font-size: 14px;
+}
+.address-list{
+    background: #fff;
+    margin-bottom: 96rpx;
+}
+.address-list-item{
+    height: 80px;
+    border-bottom: 1px solid #eaeaea;
+    color:#666;
+}
+.address-list-mid{
+    width: 75%;
+    margin: 30rpx 0rpx 30rpx 0rpx;
+}
+.address-list-lf{
+    width: 10%;
+    margin: 50rpx 0rpx 30rpx 24rpx;
+}
+.address-list-lr{
+    width: 10%;
+    color:#EC5151;
+    height: 80px;
+    line-height: 70px;
+}
+.address-tp{
+    font-size: 14px;
+}
+.address-bt{
+    font-size: 12px;
+}
+.addAddress{
+    position:fixed;
+    left:0;
+    bottom:0;
+    width: 100%;
+    height: 96rpx;
+    line-height: 96rpx;
+    color: #EC5151;
+    text-align: center;
+    font-size: 32rpx;
+    background:#fff;
+    border-top: 1px solid #e7e7e7;
+}
+.address-edit{
+    height: 51px;
+    line-height: 51px;
+    text-align: center;
+    font-size: 16px;
+}
+.address-name{
+    width:50%;
+}
+.address-phone{
+    width:50%;
+    text-align: center;
+}
+.addMessage-item{
+    position: relative;
+}

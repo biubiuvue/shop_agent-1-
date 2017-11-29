@@ -1,0 +1,129 @@
+/*page{
+  background: #f5f5f5;
+}*/
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  color: #939393;
+}
+text,view{
+  font-family: Microsoft YaHei;
+    font-size: 14px;
+}
+.nav_left{
+  display: inline-block;
+  width: 25%;
+  height: 84%;
+  background: #f5f5f5;
+  text-align: center;
+  position: fixed;
+  top: 15%;
+  left:0;
+  z-index:999;
+}
+.nav_left .nav_left_items{
+  height: 30px;
+  line-height: 30px;
+  padding: 6px 0;
+  border-bottom: 1px solid #dedede;
+  font-size: 14px;
+  color:#000;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.nav_left .nav_left_items.active{
+  background: #fff;
+}
+.nav_right{
+  position: fixed;
+  right: 0;
+  top: 15%;
+  flex: 1;
+  width: 75%;
+  height: 84%;
+  padding: 10px;
+  background: #fff;
+  box-sizing: border-box;
+}
+.nav_right .nav_right_items .lay-tap{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 111;
+}
+.nav_right .nav_right_items{
+  float: left;
+  width: 33.33%;
+  height: 80px;
+  text-align: center;
+  position: relative;
+}
+.nav_right .nav_right_items image{
+  width: 50px;
+  height: 50px;
+}
+.nav_right .nav_right_items text{
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.tips{
+  width: 90%;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%)
+}
+.btn-area{
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-bottom: 1px solid #e8e8e8;
+    background: #F6F6F9;
+    height: 14.5%
+}
+.btn-area form{
+    width: 95%;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+.btn-area form .form-box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start
+}
+.btn-area form .form-box .search-ipt{
+    flex:1;
+}
+.btn-area form .form-box .search-ipt input{
+    background: #fff;
+    height: 90rpx;
+    padding: 0 30rpx;
+    border-radius:  4px 0 0 4px;
+    font-size:30rpx;
+
+}
+.btn-area form .form-box button{
+    height: 90rpx;
+    line-height: 90rpx;
+    border-radius: 0 4px 4px 0;
+    background: #EC5151;
+    border: 1px solid #df4141!important;
+    color: #fff;
+    font-size: 30rpx;
+}

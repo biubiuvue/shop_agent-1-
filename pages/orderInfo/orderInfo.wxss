@@ -1,0 +1,161 @@
+/* orderInfo.wxss */
+.page{
+    background: #f8f8f8;
+    font-family: "Microsoft yahei";
+}
+.title {
+    background: #fff;
+    padding: 52rpx 0px 20rpx;
+    padding-top: 132rpx;
+    text-align: center;
+    border-top:1px solid #eee;
+}
+.title span {
+    font-weight: 400;
+    color: #666;
+}
+.title .h3 {
+    font-size: 60rpx;
+    color: #F5751D;
+}
+.left {
+    flex: 1;
+    text-align: left;
+}
+
+.right {
+    flex: 3;
+    text-align: right;
+}
+
+.orderinfo {
+    overflow: hidden;
+    background: #fff;
+    padding:20rpx;
+}
+
+.orderinfo .li {
+    display: flex;
+    justify-content: space-around;
+    padding: 12rpx 0;
+}
+
+.order-list {
+    box-sizing: border-box;
+    margin-top: 20rpx;
+    /*padding:0 10rpx;*/
+}
+
+.order-list .li {
+    display: flex;
+    overflow: hidden;
+    background: #fff;
+    padding: 10rpx 0 ;
+    border-bottom: 1px solid #eee;
+}
+
+.order-list .left {
+    width: 60rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0 20rpx;
+}
+
+.order-list .left span {
+    display: block;
+    width: 90rpx;
+    height:90rpx;
+    line-height: 90rpx;
+    border-radius: 90rpx;
+    border: 1px #F5751D solid;
+    /* background: #F5751D; */
+    color: #333;
+}
+
+.order-list .right {
+    text-align: left;
+    flex: 6;
+    padding: 20rpx;
+}
+
+.order-list .money {
+    display: flex;
+    font-size: 28rpx;
+    margin-bottom: 2rpx;
+    justify-content: space-between;
+    white-spacing:nowrap
+}
+
+.order-list .money span {
+    /*font-style: normal;*/
+    font-size: 32rpx;
+}
+
+.order-list .dec {
+    font-size: 28rpx;
+    display: flex;
+    white-spacing:nowrap
+
+}
+
+.dec .dec-left {
+    flex: 1.5;
+    max-width: 344rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+.order-list .yong {
+    width: 220rpx;
+    text-align: left;
+    font-size: 24rpx;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.icon {
+    color: #6C6C6C;
+    line-height: 80rpx;
+    text-align: center;
+    border: 1px #F5751D solid
+}
+
+.color {
+    border-bottom: none !important;
+}
+
+.ordercell .left{
+    font-size: 28rpx;
+    color:#666;
+}
+.ordercell .right{
+    font-size: 28rpx;
+    color:#999;
+}
+.money{
+    font-size: 28rpx;
+}
+.order-list .yong{
+    font-size: 28rpx;
+}
+.money .dec-left {
+    flex: 1.5;
+    max-width: 344rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+.money .young {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: right;
+
+}

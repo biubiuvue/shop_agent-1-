@@ -1,0 +1,82 @@
+/**index.wxss**/
+.login-msg{
+  padding: 0 30rpx;
+}
+.logo{
+  width:70%;
+  height:160px;  
+  margin: 0 auto;
+  padding: 100rpx 0rpx;
+}
+.logo image{
+  display: block;
+  width:100%;
+  height: 100%;
+}
+.tel{
+  height:70rpx;
+  line-height: 70rpx;
+  padding-bottom: 5rpx;
+  font-size: 14px;
+  border-bottom:1px solid #5385A9;
+}
+.tel-lf{
+  width:10%;
+  height:85%;
+}
+.tel-lf image{
+  display: block;
+  width:100%;
+  height: 100%;
+}
+.tel-lr{
+  width:87%;
+  height:70rpx;
+  padding-left: 3%
+}
+.short{
+  margin-top: 40rpx;
+  height: 70rpx;
+  padding-bottom: 5rpx;
+  font-size: 14px;
+  border-bottom:1px solid #5385A9;
+}
+.short-lf{
+  width: 10%;
+  height: 85%;
+}
+.short-mid{
+  width: 62%;
+  height: 100%;
+  padding-left: 3%
+}
+.short-lr{
+  display: block;
+  border:1px solid #CACACA !important;
+  width: 25%;
+  line-height: 50rpx !important;
+  outline: none;
+  background: #fff;
+  padding:0rpx !important;
+  color:#585858 !important;
+  font-size: 12px !important;
+}
+.short-lf image{
+  display: block;
+  width: 100%;
+  height:100%;
+}
+.login{
+  width:80%;
+  margin: 0 auto;
+  height: 80rpx;
+  line-height: 80rpx;
+  border:1px solid #CACACA !important;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 160rpx;
+  border:none;
+  outline:none;
+  background: #fff !important;
+  color:#666 !important;
+}

@@ -1,0 +1,59 @@
+<view class="container">
+    <!-- 购物车没有物品 -->
+    <view class="onLoaded">
+        <view class="none-goods" wx:if="{{!(carts.length>0?true:false)}}">
+            <view class="cart-icon">
+                <image src="../../public/images/nogoods.png" />
+            </view>
+            <text>购物车还没有物品，赶快去购物吧</text>
+        </view>
+        <view wx:if="{{carts.length>0?true:false}}">
+            <view class="cart-goods-block">
+                <!-- wx:for 渲染购物车列表 -->
+                <!-- <view class="cart-goods-item" wx:for="{{carts}}" wx:key="{{index}}"  data-id="{{item.goodsid}}" catchtap="goProdetail"> -->
+                <view class="cart-goods-item" wx:for="{{carts}}" wx:key="{{index}}">
+                    <!-- wx:if 是否选择显示不同图标 -->
+                    <icon wx:if="{{item.selected}}" type="success" size="20" catchtap="selectList" data-index="{{index}}" class="myicon" color="rgb(230,67,64)"
+                    />
+                    <icon wx:else type="circle" size="20" catchtap="selectList" data-index="{{index}}" class="myicon" color="rgb(230,67,64)"
+                    />
+                    <image src="{{item.thumb}}"  data-id="{{item.goodsid  }}"  catchtap="goProdetail"/>
+                    <!-- 点击商品图片可跳转到商品详情 -->
+                    <view class="pro">
+                        <view>
+                            <text class="goods_name">{{item.title}}</text>
+                            <text class="goods_price">￥{{item.marketprice}}</text>
+                            <text class="goods_detail" wx:if="{{item.optiontitle!=null}}">{{item.optiontitle}}</text>
+                            <text class="goods_detail" wx:else>该商品无规格</text>
+                        </view>
+                        <!-- 加减按钮 -->
+                        <view class="num_option">
+                            <view class="num_minus" catchtap="minusCount" data-index="{{index}}" data-cartid="{{item.id}}">-</view>
+                            <view class="num_display">{{item.total}}</view>
+                            <view class="num_plus" catchtap="addCount" data-index="{{index}}" data-cartid="{{item.id}}">+</view>
+                        </view>
+                        <!-- 删除按钮 -->
+                        <view class="delete-btn" catchtap="deleteList" data-index="{{index}}" data-cartid="{{item.id}}">删除</view>
+                    </view>
+                </view>
+            </view>
+            <!-- 底部操作栏 -->
+            <view class="cart-bottom-bar clearfix">
+                <view class="cart-bottom-lf fl clearfix">
+                    <view bindtap="selectAll" class="fl">
+                        <icon wx:if="{{selectAllStatus}}" type="success" size="20" class="l-mycheck" color="rgb(230,67,64)" />
+                        <icon wx:else type="circle" size="20" class="l-mycheck" color="rgb(230,67,64)" />
+                    </view>
+                    <view class="sel-text fl">全选</view>
+                </view>
+                <view class="cart-bottom-lr fr">
+                    <view class="total-price fl clearfix">
+                        <view class="title fl">总计：</view>
+                        <text class="num fl">￥{{totalPrice}}</text>
+                    </view>
+                    <button type="warn" bindtap="settlement" data-target="1" class="fr gopay">去结算</button>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

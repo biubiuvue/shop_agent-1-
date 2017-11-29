@@ -1,0 +1,6 @@
+.my-animation{
+    background: url(http://ws7.wshoto.com/attachment/images/2/2017/01/animation2.jpg) no-repeat center center;
+    background-size: 100%;
+    transform:scale(2,2);
+    overflow: hidden;
+}

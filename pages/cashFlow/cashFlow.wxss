@@ -1,0 +1,36 @@
+.page{
+    background: #fff;
+    font-family: Microsoft yahei;
+}
+.cashFlow-number{
+    height: 220rpx;
+    background: #fff;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 25px;
+    color:#A7BA2C;
+}
+.cashFlow-remind{
+    padding:0rpx 40rpx;
+    padding-top: 60rpx;
+    background: #fff;
+}
+.remind-item{
+    display: block;
+    font-size: 12px;
+    color:#333;
+    line-height: 22px;
+}
+.withdrawals{
+    width:95%;
+    height:100rpx;
+    line-height:100rpx;
+    text-align:center;
+    font-size:16px;
+    margin:0 auto;
+    border-radius:5px;
+    background:#19AC15;
+    color:#fff;
+    margin-top:40rpx;  
+}

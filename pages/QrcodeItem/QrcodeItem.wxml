@@ -1,0 +1,9 @@
+<!--QRCode.wxml-->
+<view class="page" style="{{windowHeight}}" wx:if="{{!onLoaded}}">
+    <view class="qrImg" style="{{windowHeight}}">
+        <image src="{{qrImg}}"  data-src="{{qrImg}}" bindtap ="previewImage"></image>
+    </view>
+</view>
+<view class="loadding" wx:if="{{onLoaded}}">
+    <image src="../../public/images/loadding.gif"></image>
+</view>

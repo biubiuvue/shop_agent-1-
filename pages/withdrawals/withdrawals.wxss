@@ -1,0 +1,73 @@
+.page{
+  background: #fff;
+  font-family: Microsoft yahei;
+  padding-bottom: 100rpx;
+}
+.money{
+  width: 100%;
+  /* height: 400rpx; */
+  height: 350rpx;
+  background: #fff;
+  color:#A7BA2C;
+}
+.money-title{
+  font-size: 20px;
+  text-align: center;
+  /* padding-top: 120rpx; */
+  padding-top: 100rpx;
+  color:#A7BA2C;
+}
+.money-item{
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.income{
+  background: #fff;
+  padding-bottom:30rpx;
+}
+.income-title{
+  font-size: 16px;
+  color:#333;
+  padding-left: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom:1px solid #F5F5F5;
+}
+.income-item{
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-left: 30rpx;
+  border-bottom:1px solid #F5F5F5;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding-right:30rpx;
+}
+.income-item text{
+  color:#666;
+  font-size: 14px;
+  display: block;
+}
+.income-element{
+  display: flex;
+  justify-content:center;
+}
+.income-element text:nth-child(1){
+  margin-right: 20rpx;
+}
+.deltriangle{
+  margin-top:36rpx;
+}
+.gopay{
+  width:95%;
+  height:100rpx;
+  line-height:100rpx;
+  text-align:center;
+  font-size:16px;
+  margin:0 auto;
+  border-radius:5px;
+  background:#19AC15;
+  color:#fff;
+  margin-top:40rpx;  
+}

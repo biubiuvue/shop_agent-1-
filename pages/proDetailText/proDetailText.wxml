@@ -1,0 +1,19 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class="page">
+  <view wx:if="{{!onLoaded}}">
+    <view class="top-nav-bar">
+      <view class="item goods" bindtap="proTap" data-id="{{pro_info.id}}">商品</view>
+      <view class="item detail selected">详情</view>
+    </view>
+    <view class="proDetailTit">
+      商品详情
+    </view>
+    <view class="proDetailNode">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+  </view>
+  <!-- loadding -->
+  <view class="loadding" wx:if="{{onLoaded}}">
+    <image src="../../public/images/loadding.gif"></image>
+  </view>
+</view>

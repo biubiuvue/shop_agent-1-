@@ -1,0 +1,5 @@
+.my-animation{
+    background: url(../../public/images/animation.jpg) no-repeat center center;
+    background-size: cover;
+    transform:scale(2,2);
+}

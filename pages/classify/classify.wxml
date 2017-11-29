@@ -1,0 +1,37 @@
+<view class="container" wx:if="{{!onLoaded}}" style="{{windowHeight}}">
+  <view class="btn-area">
+    <form bindsubmit="searchTap">
+      <view class="form-box">
+        <view class="search-ipt">
+          <input placeholder="输入关键字搜索" name="searchBox" value="{{defVal}}" />
+        </view>
+        <button formType="submit">搜索</button>
+      </view>
+    </form>
+  </view>
+  <scroll-view scroll-y="true" class="nav_left">
+    <block wx:for="{{navLeftItems}}" wx:key="{{index}}">
+      <view class="nav_left_items {{curNav == item.id ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.id}}">{{item.name}}</view>
+    </block>
+  </scroll-view>
+  <scroll-view scroll-y="true" class="nav_right">
+    <view wx:if="{{navRightItems != 'Empty results.'}}">
+      <block wx:for="{{navRightItems}}" wx:key="{{index}}">
+        <view class="nav_right_items">
+          <view class="lay-tap" data-pid="{{item.parentid}}" data-id="{{item.id}}" data-tit="{{item.name}}" bindtap="goodslistTap"></view>
+          <view>
+            <image src="{{item.thumb}}"></image>
+          </view>
+          <view>
+            <text>{{item.name}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view wx:else class="tips">该分类下暂无数据哦！</view>
+  </scroll-view>
+</view>
+<!-- loadding -->
+<view class="loadding" wx:if="{{onLoaded}}">
+  <image src="../../public/images/loadding.gif"></image>
+</view>

@@ -1,0 +1,21 @@
+<!--drawbackInfo.wxml-->
+<view class="page" wx:if="{{!onLoaded}}">
+  <view class="head-info">
+    <view class="head-title">等待商家处理退款申请</view>
+    <view class="head-content">如果商家同意：并由商家退款到你账户余额</view>
+    <view class="head-content">如果商家发货： 申请将关闭，关闭后可以再次发起退款</view>
+    <view class="head-content">如果商家未处理：请及时与商家联系</view>
+  </view>
+  <view class="head-info">
+    <view class="head-title">协商详情</view>
+    <view class="head-content">退款类型：仅退款</view>
+    <view class="head-content">退款原因：{{refundInfo.reason}}</view>
+    <view class="head-content">退款说明：{{refundInfo.content}}</view>
+    <view class="head-content">申请时间：{{refundInfo.createtime}}</view>
+  </view>
+  <button class="cancel-refund" bindtap="cancelRefund">取消退款申请</button>
+</view>
+<!-- loadding -->
+<view class="loadding" wx:if="{{onLoaded}}">
+  <image src="../../public/images/loadding.gif"></image>
+</view>

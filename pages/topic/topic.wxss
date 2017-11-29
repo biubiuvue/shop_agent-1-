@@ -1,0 +1,8 @@
+/* topic.wxss */
+.page{
+  background: #f8f8f8;
+  font-family: Microsoft yahei;
+}
+.proDetailNode{
+    padding:10px;
+}

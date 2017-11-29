@@ -1,0 +1,79 @@
+{
+  "pages": [
+    "pages/strap/strap",
+    "pages/orderConfirm/orderConfirm",
+    "pages/moneyDetaile/moneyDetaile",
+    "pages/userInfo/userInfo",
+    "pages/cashFlow/cashFlow",
+    "pages/QRCode/QRCode",
+    "pages/distributionCenter/distributionCenter",
+    "pages/withdrawals/withdrawals",
+    "pages/date/date",
+    "pages/partner/partner",
+    "pages/orderInfo/orderInfo",
+    "pages/partnerInfo/partnerInfo",
+    "pages/product/product",
+    "pages/drawbackInfo/drawbackInfo",
+    "pages/orderStatus/orderStatus",
+    "pages/editAddress/editAddress",
+    "pages/addressList/addressList",
+    "pages/deliveryList/deliveryList",
+    "pages/shopcart/shopcart",
+    "pages/pro_detail/pro_detail",
+    "pages/center/center",
+    "pages/deposit/deposit",
+    "pages/drawback/drawback",
+    "pages/classify/classify",
+    "pages/login/login",
+    "pages/logs/logs",
+    "pages/index/index",
+    "pages/proDetailText/proDetailText",
+    "pages/orderDetail/orderDetail",
+    "pages/favorite/favorite",
+    "pages/logistics/logistics",
+    "pages/history/history",
+    "pages/wxlogin/wxlogin",
+    "pages/topic/topic",
+    "pages/distributionOrder/distributionOrder",
+    "pages/QrcodeItem/QrcodeItem"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#595959",
+    "selectedColor": "#EC5151",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "public/images/def-01.png",
+        "selectedIconPath": "public/images/hover-01.png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "分类",
+        "iconPath": "public/images/def-02.png",
+        "selectedIconPath": "public/images/hover-02.png"
+      },
+      {
+        "pagePath": "pages/shopcart/shopcart",
+        "text": "购物车",
+        "iconPath": "public/images/def-03.png",
+        "selectedIconPath": "public/images/hover-03.png"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "个人中心",
+        "iconPath": "public/images/def-04.png",
+        "selectedIconPath": "public/images/hover-04.png"
+      }
+    ]
+  },
+  "debug": true
+}
